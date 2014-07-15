@@ -1,4 +1,6 @@
-﻿Public Class frmAdminMenu
+﻿Imports System.Data.OleDb
+
+Public Class frmAdminMenu
     Dim dbProvider As String
     Dim dbSource As String
     Dim cnn As New OleDb.OleDbConnection
@@ -42,18 +44,12 @@
     End Sub
 
     Private Sub btnLogout_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogout.Click
-
         Me.Hide()
         frmLogin.Show()
 
     End Sub
 
-    Private Sub AddEmployeeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub btnAddEmp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddEmp.Click
         frmAddEmployee.Show()
     End Sub
-
-    Private Sub ResetUserPasswordToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        frmSetDefPas.Show()
-    End Sub
-
 End Class

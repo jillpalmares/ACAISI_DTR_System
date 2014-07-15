@@ -30,12 +30,18 @@ Partial Class frmLoggedIn
         Me.btnAmIn = New System.Windows.Forms.Button()
         Me.btnTimeOut = New System.Windows.Forms.Button()
         Me.btnTimeIn = New System.Windows.Forms.Button()
+        Me.lblHello = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblEmpName = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnPmOut
         '
         Me.btnPmOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPmOut.Location = New System.Drawing.Point(146, 158)
+        Me.btnPmOut.Location = New System.Drawing.Point(381, 158)
         Me.btnPmOut.Name = "btnPmOut"
         Me.btnPmOut.Size = New System.Drawing.Size(96, 35)
         Me.btnPmOut.TabIndex = 17
@@ -46,7 +52,7 @@ Partial Class frmLoggedIn
         'btnPmIn
         '
         Me.btnPmIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPmIn.Location = New System.Drawing.Point(43, 158)
+        Me.btnPmIn.Location = New System.Drawing.Point(278, 158)
         Me.btnPmIn.Name = "btnPmIn"
         Me.btnPmIn.Size = New System.Drawing.Size(96, 35)
         Me.btnPmIn.TabIndex = 16
@@ -57,7 +63,7 @@ Partial Class frmLoggedIn
         'btnLunOut
         '
         Me.btnLunOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLunOut.Location = New System.Drawing.Point(146, 114)
+        Me.btnLunOut.Location = New System.Drawing.Point(381, 114)
         Me.btnLunOut.Name = "btnLunOut"
         Me.btnLunOut.Size = New System.Drawing.Size(96, 35)
         Me.btnLunOut.TabIndex = 15
@@ -68,7 +74,7 @@ Partial Class frmLoggedIn
         'btnLunIn
         '
         Me.btnLunIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLunIn.Location = New System.Drawing.Point(43, 114)
+        Me.btnLunIn.Location = New System.Drawing.Point(278, 114)
         Me.btnLunIn.Name = "btnLunIn"
         Me.btnLunIn.Size = New System.Drawing.Size(96, 35)
         Me.btnLunIn.TabIndex = 14
@@ -79,7 +85,7 @@ Partial Class frmLoggedIn
         'btnAmOut
         '
         Me.btnAmOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAmOut.Location = New System.Drawing.Point(146, 70)
+        Me.btnAmOut.Location = New System.Drawing.Point(381, 70)
         Me.btnAmOut.Name = "btnAmOut"
         Me.btnAmOut.Size = New System.Drawing.Size(96, 35)
         Me.btnAmOut.TabIndex = 13
@@ -90,7 +96,7 @@ Partial Class frmLoggedIn
         'btnAmIn
         '
         Me.btnAmIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAmIn.Location = New System.Drawing.Point(43, 70)
+        Me.btnAmIn.Location = New System.Drawing.Point(278, 70)
         Me.btnAmIn.Name = "btnAmIn"
         Me.btnAmIn.Size = New System.Drawing.Size(96, 35)
         Me.btnAmIn.TabIndex = 12
@@ -101,7 +107,7 @@ Partial Class frmLoggedIn
         'btnTimeOut
         '
         Me.btnTimeOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTimeOut.Location = New System.Drawing.Point(85, 211)
+        Me.btnTimeOut.Location = New System.Drawing.Point(320, 211)
         Me.btnTimeOut.Name = "btnTimeOut"
         Me.btnTimeOut.Size = New System.Drawing.Size(115, 35)
         Me.btnTimeOut.TabIndex = 11
@@ -112,7 +118,7 @@ Partial Class frmLoggedIn
         'btnTimeIn
         '
         Me.btnTimeIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTimeIn.Location = New System.Drawing.Point(85, 16)
+        Me.btnTimeIn.Location = New System.Drawing.Point(320, 16)
         Me.btnTimeIn.Name = "btnTimeIn"
         Me.btnTimeIn.Size = New System.Drawing.Size(115, 35)
         Me.btnTimeIn.TabIndex = 10
@@ -120,13 +126,56 @@ Partial Class frmLoggedIn
         Me.btnTimeIn.Text = "TIME IN"
         Me.btnTimeIn.UseVisualStyleBackColor = True
         '
+        'lblHello
+        '
+        Me.lblHello.AutoSize = True
+        Me.lblHello.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHello.Location = New System.Drawing.Point(80, 16)
+        Me.lblHello.Name = "lblHello"
+        Me.lblHello.Size = New System.Drawing.Size(74, 25)
+        Me.lblHello.TabIndex = 18
+        Me.lblHello.Text = "Hello, "
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.lblEmpName)
+        Me.Panel1.Controls.Add(Me.lblHello)
+        Me.Panel1.Location = New System.Drawing.Point(13, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(235, 304)
+        Me.Panel1.TabIndex = 19
+        '
+        'lblEmpName
+        '
+        Me.lblEmpName.AutoSize = True
+        Me.lblEmpName.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmpName.Location = New System.Drawing.Point(80, 53)
+        Me.lblEmpName.Name = "lblEmpName"
+        Me.lblEmpName.Size = New System.Drawing.Size(75, 25)
+        Me.lblEmpName.TabIndex = 19
+        Me.lblEmpName.Text = "Name"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(40, 93)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(155, 142)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 33
+        Me.PictureBox1.TabStop = False
+        '
         'frmLoggedIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Info
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(493, 262)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnPmOut)
         Me.Controls.Add(Me.btnPmIn)
         Me.Controls.Add(Me.btnLunOut)
@@ -138,6 +187,9 @@ Partial Class frmLoggedIn
         Me.Name = "frmLoggedIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Employee Log-In"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -149,4 +201,8 @@ Partial Class frmLoggedIn
     Friend WithEvents btnAmIn As System.Windows.Forms.Button
     Friend WithEvents btnTimeOut As System.Windows.Forms.Button
     Friend WithEvents btnTimeIn As System.Windows.Forms.Button
+    Friend WithEvents lblHello As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents lblEmpName As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

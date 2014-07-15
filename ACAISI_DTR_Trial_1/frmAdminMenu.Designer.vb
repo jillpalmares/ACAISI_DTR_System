@@ -28,19 +28,19 @@ Partial Class frmAdminMenu
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.tabReports = New System.Windows.Forms.TabPage()
         Me.tabEmployees = New System.Windows.Forms.TabPage()
-        Me.dgvData = New System.Windows.Forms.DataGridView()
-        Me.tabAdminOpt = New System.Windows.Forms.TabControl()
         Me.panMenuBar = New System.Windows.Forms.Panel()
         Me.btnDeleteEmp = New System.Windows.Forms.Button()
         Me.btnEditEmp = New System.Windows.Forms.Button()
         Me.btnAddEmp = New System.Windows.Forms.Button()
+        Me.dgvData = New System.Windows.Forms.DataGridView()
         Me.TblEmployeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tabAdminOpt = New System.Windows.Forms.TabControl()
         Me.pnlAdminTop.SuspendLayout()
         Me.tabEmployees.SuspendLayout()
-        CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tabAdminOpt.SuspendLayout()
         Me.panMenuBar.SuspendLayout()
+        CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabAdminOpt.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlAdminTop
@@ -98,28 +98,6 @@ Partial Class frmAdminMenu
         Me.tabEmployees.TabIndex = 0
         Me.tabEmployees.Text = "EMPLOYEES"
         '
-        'dgvData
-        '
-        Me.dgvData.AllowUserToOrderColumns = True
-        Me.dgvData.AutoGenerateColumns = False
-        Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvData.DataSource = Me.TblEmployeesBindingSource1
-        Me.dgvData.Location = New System.Drawing.Point(3, 44)
-        Me.dgvData.Name = "dgvData"
-        Me.dgvData.Size = New System.Drawing.Size(1194, 506)
-        Me.dgvData.TabIndex = 0
-        '
-        'tabAdminOpt
-        '
-        Me.tabAdminOpt.Controls.Add(Me.tabEmployees)
-        Me.tabAdminOpt.Controls.Add(Me.tabReports)
-        Me.tabAdminOpt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tabAdminOpt.Location = New System.Drawing.Point(2, 49)
-        Me.tabAdminOpt.Name = "tabAdminOpt"
-        Me.tabAdminOpt.SelectedIndex = 0
-        Me.tabAdminOpt.Size = New System.Drawing.Size(1208, 582)
-        Me.tabAdminOpt.TabIndex = 1
-        '
         'panMenuBar
         '
         Me.panMenuBar.BackColor = System.Drawing.Color.Gainsboro
@@ -164,6 +142,28 @@ Partial Class frmAdminMenu
         Me.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAddEmp.UseVisualStyleBackColor = True
         '
+        'dgvData
+        '
+        Me.dgvData.AllowUserToOrderColumns = True
+        Me.dgvData.AutoGenerateColumns = False
+        Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvData.DataSource = Me.TblEmployeesBindingSource1
+        Me.dgvData.Location = New System.Drawing.Point(3, 44)
+        Me.dgvData.Name = "dgvData"
+        Me.dgvData.Size = New System.Drawing.Size(1194, 506)
+        Me.dgvData.TabIndex = 0
+        '
+        'tabAdminOpt
+        '
+        Me.tabAdminOpt.Controls.Add(Me.tabEmployees)
+        Me.tabAdminOpt.Controls.Add(Me.tabReports)
+        Me.tabAdminOpt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tabAdminOpt.Location = New System.Drawing.Point(2, 49)
+        Me.tabAdminOpt.Name = "tabAdminOpt"
+        Me.tabAdminOpt.SelectedIndex = 0
+        Me.tabAdminOpt.Size = New System.Drawing.Size(1208, 582)
+        Me.tabAdminOpt.TabIndex = 1
+        '
         'frmAdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -179,10 +179,10 @@ Partial Class frmAdminMenu
         Me.pnlAdminTop.ResumeLayout(False)
         Me.pnlAdminTop.PerformLayout()
         Me.tabEmployees.ResumeLayout(False)
-        CType(Me.dgvData, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tabAdminOpt.ResumeLayout(False)
         Me.panMenuBar.ResumeLayout(False)
+        CType(Me.dgvData, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabAdminOpt.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
