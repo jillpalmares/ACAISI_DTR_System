@@ -15,8 +15,8 @@ Public Class frmAdminMenu
         'Me.TblEmployeesTableAdapter.Fill(Me.AcaisidbrDataSet.tblEmployees)
 
         cnn = New OleDb.OleDbConnection()
-        dbProvider = "Provider=Microsoft.ACE.Oledb.12.0;"
-        dbSource = " Data Source= C:\Users\User\Documents\Visual Studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\bin\Debug\acaisidbr.accdb"
+        dbProvider = "Provider=Microsoft.Jet.Oledb.4.0;"
+        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
         cnn.ConnectionString = dbProvider + dbSource
 
         'Commands for tooltip

@@ -4,21 +4,16 @@ Public Class frmAddEmployee
     Dim dbProvider As String
     Dim dbSource As String
     Dim cnn As New OleDb.OleDbConnection
-    Dim con As New OleDb.OleDbConnection
+
 
     Private Sub frmAddEmployee_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MaximizeBox = False
         MinimizeBox = False
 
         cnn = New OleDb.OleDbConnection()
-        dbProvider = "Provider=Microsoft.ACE.Oledb.12.0;"
-        dbSource = " Data Source= C:\Users\User\Documents\Visual Studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\bin\Debug\acaisidbr.accdb"
+        dbProvider = "Provider=Microsoft.Jet.Oledb.4.0;"
+        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.accdb"
         cnn.ConnectionString = dbProvider + dbSource
-
-        con = New OleDb.OleDbConnection()
-        dbProvider = "Provider=Microsoft.ACE.Oledb.12.0;"
-        dbSource = " Data Source= C:\Users\User\Documents\Visual Studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\bin\Debug\acaisidbr.accdb"
-        con.ConnectionString = dbProvider + dbSource
 
         txtFileName.Hide()
 
@@ -93,8 +88,10 @@ Public Class frmAddEmployee
             cnn.Open()
         End If
         cmd.Connection = cnn
-        cmd.CommandText = "INSERT INTO tblEmployees(EmpNo, timekeepingNo, lname, fname, mname, posi, bdate, sssNo, tinNo, philhealth, pagibigNo, rems) " & _
-                " VALUES ('" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & DTPicker.Text & "','" & txtSss.Text & "','" & txtTin.Text & "','" & txtPHealth.Text & "','" & txtPagibig.Text & "','" & cmbRemarks.Text & "')"
+        cmd.CommandText = "INSERT INTO tblEmployees(empnum, tknum, lname, fname, mname, emppos, bdate, sssnum, tinnum, phealthnum, pagibignum, emptype, pinnum, acclevel, despass, conpass, picfile) " & _
+                " VALUES ('" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & DTPicker.Text & "','" _
+                & txtSss.Text & "','" & txtTin.Text & "','" & txtPHealth.Text & "','" & txtPagibig.Text & "','" & cmbRemarks.Text & "','" & lblPIN.Text & "','" & cmbAccess.Text & "','" & txtDesPass.Text & "','" _
+                & txtConPass.Text & "','" & txtFileName.Text & "')"
 
         cmd.ExecuteNonQuery()
         cnn.Close()
@@ -112,18 +109,9 @@ Public Class frmAddEmployee
         txtPagibig.Text = ""
         cmbRemarks.Text = ""
         cmbAccess.Text = ""
+        txtDesPass.Text = ""
+        txtConPass.Text = ""
         lblPIN.Text = ""
-
-        'For Password Set
-        Dim cmnd As New OleDb.OleDbCommand
-        If Not con.State = ConnectionState.Open Then
-            con.Open()
-        End If
-        cmnd.Connection = con
-        cmnd.CommandText = "INSERT INTO tblUAccess(EmpNo, desPass, conPass, accLevel) " & _
-                " VALUES ('" & lblPIN.Text & "','" & txtDesPass.Text & "','" & txtConPass.Text & "','" & cmbAccess.Text & "')"
-        cmnd.ExecuteNonQuery()
-        con.Close()
 
         MessageBox.Show("New Employee Added.")
         Me.Hide()
