@@ -105,7 +105,7 @@ Partial Class frmAddEmployee
         'txtEmpNum
         '
         Me.txtEmpNum.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpNum.Location = New System.Drawing.Point(324, 76)
+        Me.txtEmpNum.Location = New System.Drawing.Point(324, 77)
         Me.txtEmpNum.MaxLength = 3
         Me.txtEmpNum.Name = "txtEmpNum"
         Me.txtEmpNum.Size = New System.Drawing.Size(127, 22)
@@ -553,7 +553,7 @@ Partial Class frmAddEmployee
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmAddEmployee"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Add Employee"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

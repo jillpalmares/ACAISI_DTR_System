@@ -6,9 +6,10 @@
         MinimizeBox = False
 
         btnReset.Visible = False
+        btnExitApp.Enabled = False
 
         ' By default, Exit button for terminating the whole program is hidden
-        ' Will only be activated when frmLogin is triggeres from frmLogScreen's menustrip
+        ' Will only be activated when frmLogin is triggered from frmLogScreen's menustrip
         btnExitApp.Visible = False
 
     End Sub
@@ -20,6 +21,7 @@
             btnReset.Visible = False
             btnExit.Visible = True
         Else
+            btnExitApp.Enabled = True
             btnExit.Visible = False
             btnReset.Visible = True
         End If
@@ -77,11 +79,32 @@
     End Sub
 
     Private Sub btnExitApp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExitApp.Click
-        'Confirmation of Terminating the Window
-        If MessageBox.Show("Do you want to exit?", "My Application", _
-         MessageBoxButtons.YesNo, MessageBoxIcon.Question) _
-         = DialogResult.Yes Then
+
+        'For testing only----------------------------------------
+        If txtEmpNo.Text = "040" And txtPass.Text = "admin" Then
             End
+        ElseIf MessageBox.Show("Invalid Credentials", "My Application", _
+         MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) _
+         = DialogResult.Retry Then
+            txtEmpNo.Text = ""
+            txtPass.Text = ""
         End If
+        '--------------------------------------------------------
     End Sub
+
+    'LIMITS KEY INPUT TO NUMBERS ONLY--
+    Private Sub txtEmpNo_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtEmpNo.KeyPress
+
+        '97 - 122 = Ascii codes for simple letters
+        '65 - 90  = Ascii codes for capital letters
+        '48 - 57  = Ascii codes for numbers
+
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+
+    End Sub
+
 End Class

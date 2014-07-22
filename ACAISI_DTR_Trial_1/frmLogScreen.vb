@@ -1,6 +1,19 @@
 ﻿Public Class frmLogScreen
+    'Dim dbProvider As String
+    'Dim dbSource As String
+    'Dim cnn As New OleDb.OleDbConnection
+
+    ' 18 JULY 2014
+    ' Unresolved Issue : Confirmation of PIN Entry if it is existing,
+    '                    lookup inside tblEmployees. DB connection and
+    '                    declarations are commented out. 
 
     Private Sub frmLogScreen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        'cnn = New OleDb.OleDbConnection()
+        'dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;"
+        'dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
+        'cnn.ConnectionString = dbProvider + dbSource
 
         'System Date Timer
         Timer1.Enabled = True
@@ -27,6 +40,27 @@
     End Sub
 
     Private Sub btnLogIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogIn.Click
+
+        'Dim cmd As New OleDb.OleDbCommand
+
+        'If Not cnn.State = ConnectionState.Open Then
+        '    cnn.Open()
+        'End If
+
+        'cmd.Connection = cnn
+
+        'Dim da As New OleDb.OleDbDataAdapter("SELECT pinnum FROM tblEmployees ", cnn)
+
+        'Dim dt As New DataTable
+        'da.Fill(dt)
+
+        'cnn.Close()
+
+        ' Search entered PIN from database if valid or existing
+        'If txtPin.Text = dt.Columns(0).Item("d") Then
+
+        'End If
+
         ' Clears text box entry
         txtPin.Text = ""
 

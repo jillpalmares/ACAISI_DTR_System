@@ -4,15 +4,15 @@ Public Class frmAddEmployee
     Dim dbProvider As String
     Dim dbSource As String
     Dim cnn As New OleDb.OleDbConnection
-
+    'Dim cmd As New OleDb.OleDbCommand
 
     Private Sub frmAddEmployee_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MaximizeBox = False
         MinimizeBox = False
 
         cnn = New OleDb.OleDbConnection()
-        dbProvider = "Provider=Microsoft.Jet.Oledb.4.0;"
-        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.accdb"
+        dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;"
+        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
         cnn.ConnectionString = dbProvider + dbSource
 
         txtFileName.Hide()
@@ -60,8 +60,6 @@ Public Class frmAddEmployee
 
     End Sub
 
-
-
     Private Sub btnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReset.Click
         txtEmpNum.Text = ""
         txtTkNo.Text = ""
@@ -84,6 +82,7 @@ Public Class frmAddEmployee
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
         Dim cmd As New OleDb.OleDbCommand
+        cnn.ConnectionString = dbProvider + dbSource
         If Not cnn.State = ConnectionState.Open Then
             cnn.Open()
         End If
@@ -120,6 +119,24 @@ Public Class frmAddEmployee
 
     End Sub
 
+    Sub RefreshData()
+
+        Dim cnn As New OleDb.OleDbConnection
+        cnn.ConnectionString = dbProvider + dbSource
+        If Not cnn.State = ConnectionState.Open Then
+            cnn.Open()
+        End If
+
+        Dim da As New OleDb.OleDbDataAdapter("SELECT empnum, lname, fname, mname, emppos, bdate, emptype, pinnum, acclevel FROM tblEmployees", cnn)
+
+        Dim dt As New DataTable
+        da.Fill(dt)
+
+        frmAdminMenu.dgvData.DataSource = dt
+
+        cnn.Close()
+    End Sub
+
     Private Sub btnAddPic_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddPic.Click
         Me.OpenFileDialog1.ShowDialog()
 
@@ -137,7 +154,7 @@ Public Class frmAddEmployee
 
 
     Private Sub btnGenerate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGenerate.Click
-       Dim rng As New Random
+        Dim rng As New Random
         Dim number As Integer = rng.Next(1000, 9999)
         Dim digits As String = number.ToString("0000")
         Console.WriteLine(digits)
@@ -159,5 +176,4 @@ Public Class frmAddEmployee
             txtConPass.Hide()
         End If
     End Sub
-
 End Class
