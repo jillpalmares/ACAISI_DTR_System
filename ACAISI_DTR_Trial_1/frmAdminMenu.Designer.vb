@@ -24,23 +24,14 @@ Partial Class frmAdminMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlAdminTop = New System.Windows.Forms.Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.tabReports = New System.Windows.Forms.TabPage()
         Me.tabEmployees = New System.Windows.Forms.TabPage()
         Me.panMenuBar = New System.Windows.Forms.Panel()
-        Me.btnDeleteEmp = New System.Windows.Forms.Button()
-        Me.btnEditEmp = New System.Windows.Forms.Button()
-        Me.btnAddEmp = New System.Windows.Forms.Button()
         Me.dgvData = New System.Windows.Forms.DataGridView()
-        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dtrdb1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dtrdb1DataSet = New WindowsApplication1.dtrdb1DataSet()
-        Me.TblEmployeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tabAdminOpt = New System.Windows.Forms.TabControl()
-        Me.TblEmployeesTableAdapter = New WindowsApplication1.dtrdb1DataSetTableAdapters.tblEmployeesTableAdapter()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpnumDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PinnumDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,6 +40,16 @@ Partial Class frmAdminMenu
         Me.EmpposDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmptypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.acclevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Dtrdb1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Dtrdb1DataSet = New WindowsApplication1.dtrdb1DataSet()
+        Me.tabAdminOpt = New System.Windows.Forms.TabControl()
+        Me.TblEmployeesTableAdapter = New WindowsApplication1.dtrdb1DataSetTableAdapters.tblEmployeesTableAdapter()
+        Me.btnEmpReport = New System.Windows.Forms.Button()
+        Me.btnDeleteEmp = New System.Windows.Forms.Button()
+        Me.btnEditEmp = New System.Windows.Forms.Button()
+        Me.btnAddEmp = New System.Windows.Forms.Button()
+        Me.TblEmployeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.pnlAdminTop.SuspendLayout()
         Me.tabEmployees.SuspendLayout()
         Me.panMenuBar.SuspendLayout()
@@ -56,8 +57,8 @@ Partial Class frmAdminMenu
         CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dtrdb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dtrdb1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabAdminOpt.SuspendLayout()
+        CType(Me.TblEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlAdminTop
@@ -118,6 +119,7 @@ Partial Class frmAdminMenu
         'panMenuBar
         '
         Me.panMenuBar.BackColor = System.Drawing.Color.Gainsboro
+        Me.panMenuBar.Controls.Add(Me.btnEmpReport)
         Me.panMenuBar.Controls.Add(Me.btnDeleteEmp)
         Me.panMenuBar.Controls.Add(Me.btnEditEmp)
         Me.panMenuBar.Controls.Add(Me.btnAddEmp)
@@ -125,39 +127,6 @@ Partial Class frmAdminMenu
         Me.panMenuBar.Name = "panMenuBar"
         Me.panMenuBar.Size = New System.Drawing.Size(1108, 36)
         Me.panMenuBar.TabIndex = 1
-        '
-        'btnDeleteEmp
-        '
-        Me.btnDeleteEmp.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Delete
-        Me.btnDeleteEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDeleteEmp.Location = New System.Drawing.Point(81, 1)
-        Me.btnDeleteEmp.Name = "btnDeleteEmp"
-        Me.btnDeleteEmp.Size = New System.Drawing.Size(34, 34)
-        Me.btnDeleteEmp.TabIndex = 2
-        Me.btnDeleteEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDeleteEmp.UseVisualStyleBackColor = True
-        '
-        'btnEditEmp
-        '
-        Me.btnEditEmp.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.document_edit
-        Me.btnEditEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnEditEmp.Location = New System.Drawing.Point(42, 1)
-        Me.btnEditEmp.Name = "btnEditEmp"
-        Me.btnEditEmp.Size = New System.Drawing.Size(34, 34)
-        Me.btnEditEmp.TabIndex = 1
-        Me.btnEditEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEditEmp.UseVisualStyleBackColor = True
-        '
-        'btnAddEmp
-        '
-        Me.btnAddEmp.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.add
-        Me.btnAddEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAddEmp.Location = New System.Drawing.Point(3, 1)
-        Me.btnAddEmp.Name = "btnAddEmp"
-        Me.btnAddEmp.Size = New System.Drawing.Size(34, 34)
-        Me.btnAddEmp.TabIndex = 0
-        Me.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAddEmp.UseVisualStyleBackColor = True
         '
         'dgvData
         '
@@ -174,51 +143,20 @@ Partial Class frmAdminMenu
         Me.dgvData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmpnumDataGridViewTextBoxColumn, Me.PinnumDataGridViewTextBoxColumn, Me.LnameDataGridViewTextBoxColumn, Me.FnameDataGridViewTextBoxColumn, Me.MnameDataGridViewTextBoxColumn, Me.EmpposDataGridViewTextBoxColumn, Me.EmptypeDataGridViewTextBoxColumn, Me.acclevel})
+        Me.dgvData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.EmpnumDataGridViewTextBoxColumn, Me.PinnumDataGridViewTextBoxColumn, Me.LnameDataGridViewTextBoxColumn, Me.FnameDataGridViewTextBoxColumn, Me.MnameDataGridViewTextBoxColumn, Me.EmpposDataGridViewTextBoxColumn, Me.EmptypeDataGridViewTextBoxColumn, Me.acclevel})
         Me.dgvData.DataSource = Me.TblEmployeesBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvData.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvData.Location = New System.Drawing.Point(3, 44)
         Me.dgvData.Name = "dgvData"
         Me.dgvData.ReadOnly = True
         Me.dgvData.Size = New System.Drawing.Size(1108, 506)
         Me.dgvData.TabIndex = 0
         '
-        'TblEmployeesBindingSource
+        'ID
         '
-        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
-        Me.TblEmployeesBindingSource.DataSource = Me.Dtrdb1DataSetBindingSource
-        '
-        'Dtrdb1DataSetBindingSource
-        '
-        Me.Dtrdb1DataSetBindingSource.DataSource = Me.Dtrdb1DataSet
-        Me.Dtrdb1DataSetBindingSource.Position = 0
-        '
-        'Dtrdb1DataSet
-        '
-        Me.Dtrdb1DataSet.DataSetName = "dtrdb1DataSet"
-        Me.Dtrdb1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tabAdminOpt
-        '
-        Me.tabAdminOpt.Controls.Add(Me.tabEmployees)
-        Me.tabAdminOpt.Controls.Add(Me.tabReports)
-        Me.tabAdminOpt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tabAdminOpt.Location = New System.Drawing.Point(2, 52)
-        Me.tabAdminOpt.Name = "tabAdminOpt"
-        Me.tabAdminOpt.SelectedIndex = 0
-        Me.tabAdminOpt.Size = New System.Drawing.Size(1122, 582)
-        Me.tabAdminOpt.TabIndex = 1
-        '
-        'TblEmployeesTableAdapter
-        '
-        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
+        Me.ID.DataPropertyName = "ID"
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
         '
         'EmpnumDataGridViewTextBoxColumn
         '
@@ -284,6 +222,80 @@ Partial Class frmAdminMenu
         Me.acclevel.ReadOnly = True
         Me.acclevel.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
+        'TblEmployeesBindingSource
+        '
+        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
+        Me.TblEmployeesBindingSource.DataSource = Me.Dtrdb1DataSetBindingSource
+        '
+        'Dtrdb1DataSetBindingSource
+        '
+        Me.Dtrdb1DataSetBindingSource.DataSource = Me.Dtrdb1DataSet
+        Me.Dtrdb1DataSetBindingSource.Position = 0
+        '
+        'Dtrdb1DataSet
+        '
+        Me.Dtrdb1DataSet.DataSetName = "dtrdb1DataSet"
+        Me.Dtrdb1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'tabAdminOpt
+        '
+        Me.tabAdminOpt.Controls.Add(Me.tabEmployees)
+        Me.tabAdminOpt.Controls.Add(Me.tabReports)
+        Me.tabAdminOpt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tabAdminOpt.Location = New System.Drawing.Point(2, 52)
+        Me.tabAdminOpt.Name = "tabAdminOpt"
+        Me.tabAdminOpt.SelectedIndex = 0
+        Me.tabAdminOpt.Size = New System.Drawing.Size(1122, 582)
+        Me.tabAdminOpt.TabIndex = 1
+        '
+        'TblEmployeesTableAdapter
+        '
+        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
+        '
+        'btnEmpReport
+        '
+        Me.btnEmpReport.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.report
+        Me.btnEmpReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnEmpReport.Location = New System.Drawing.Point(120, 1)
+        Me.btnEmpReport.Name = "btnEmpReport"
+        Me.btnEmpReport.Size = New System.Drawing.Size(34, 34)
+        Me.btnEmpReport.TabIndex = 3
+        Me.btnEmpReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEmpReport.UseVisualStyleBackColor = True
+        '
+        'btnDeleteEmp
+        '
+        Me.btnDeleteEmp.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Delete
+        Me.btnDeleteEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDeleteEmp.Location = New System.Drawing.Point(81, 1)
+        Me.btnDeleteEmp.Name = "btnDeleteEmp"
+        Me.btnDeleteEmp.Size = New System.Drawing.Size(34, 34)
+        Me.btnDeleteEmp.TabIndex = 2
+        Me.btnDeleteEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDeleteEmp.UseVisualStyleBackColor = True
+        '
+        'btnEditEmp
+        '
+        Me.btnEditEmp.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.document_edit
+        Me.btnEditEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnEditEmp.Location = New System.Drawing.Point(42, 1)
+        Me.btnEditEmp.Name = "btnEditEmp"
+        Me.btnEditEmp.Size = New System.Drawing.Size(34, 34)
+        Me.btnEditEmp.TabIndex = 1
+        Me.btnEditEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEditEmp.UseVisualStyleBackColor = True
+        '
+        'btnAddEmp
+        '
+        Me.btnAddEmp.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.add
+        Me.btnAddEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAddEmp.Location = New System.Drawing.Point(3, 1)
+        Me.btnAddEmp.Name = "btnAddEmp"
+        Me.btnAddEmp.Size = New System.Drawing.Size(34, 34)
+        Me.btnAddEmp.TabIndex = 0
+        Me.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAddEmp.UseVisualStyleBackColor = True
+        '
         'frmAdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -304,8 +316,8 @@ Partial Class frmAdminMenu
         CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dtrdb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dtrdb1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabAdminOpt.ResumeLayout(False)
+        CType(Me.TblEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -325,6 +337,7 @@ Partial Class frmAdminMenu
     Friend WithEvents Dtrdb1DataSet As WindowsApplication1.dtrdb1DataSet
     Friend WithEvents TblEmployeesBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TblEmployeesTableAdapter As WindowsApplication1.dtrdb1DataSetTableAdapters.tblEmployeesTableAdapter
+    Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents EmpnumDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PinnumDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LnameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -333,4 +346,5 @@ Partial Class frmAdminMenu
     Friend WithEvents EmpposDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents EmptypeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents acclevel As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnEmpReport As System.Windows.Forms.Button
 End Class

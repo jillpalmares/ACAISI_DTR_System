@@ -1,0 +1,37 @@
+ Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
+
+        Dim cmd As New OleDb.OleDbCommand
+        If Not cnn.State = ConnectionState.Open Then
+            cnn.Open()
+        End If
+        cmd.Connection = cnn
+
+        cmd.CommandText = "UPDATE tblEmployees SET ID = " & txtID.Text & _
+                    ", empnum = '" & txtEmpNum.Text & "'" & _
+		    ", tknum = '" & txtTkNo.Text & "'" & _
+                    ", lname = '" & txtlname.Text & "'" & _
+                    ", fname = '" & txtfname.Text & "'" & _
+                    ", mname = '" & txtmname.Text & "'" & _
+                    ", emppos = '" & txtPosition.Text & "'" & _
+                    ", bdate = '" & DTPicker.Text & "'" & _
+                    ", sssnum = '" & txtSss.Text & "'" & _
+                    ", tinnum = '" & txtTin.Text & "'" & _
+                    ", phealthnum = '" & txtPHealth.Text & "'" & _
+                    ", pagibig ='" & txtPagibig.Text & "'" & _
+                    ", emptype = '" & cmbRemarks.Text & "'" & _
+                    ", acclevel = '" & cmbAccess.Text & "'" & _
+                    ", despass = '" & txtDesPass.Text & "'" & _
+                    ", conpass = '" & txtConPass.Text & "'" & _
+                    ", pinnum = '" & lblPIN.Text & "'" & _
+                    ", picfile = '" & txtFileName.Text & "'" & _
+                    " WHERE ID =" & txtID.Text
+        cmd.ExecuteNonQuery()
+
+        RefreshData()
+        cnn.Close()
+
+    End Sub
+
+
+//fragment in INSERT INTO statement in btnAdd
+'" & txtID.Text & "',

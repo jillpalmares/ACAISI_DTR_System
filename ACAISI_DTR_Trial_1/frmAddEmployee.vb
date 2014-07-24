@@ -23,6 +23,9 @@ Public Class frmAddEmployee
             Me.PictureBox1.BackgroundImage = New System.Drawing.Bitmap(txtFileName.Text)
         End If
 
+        'Remove Photo button set hidden by default
+        btnRemove.Hide()
+
         'Password set hidden by default
         lblDesPass.Hide()
         lblConPass.Hide()
@@ -74,6 +77,10 @@ Public Class frmAddEmployee
         txtPagibig.Text = ""
         cmbRemarks.Text = ""
         lblPIN.Text = "----"
+        btnAddPic.Show()
+        btnRemove.Hide()
+        txtFileName.Text = ""
+        Me.PictureBox1.BackgroundImage = Image.FromFile("C:\Users\User\Documents\visual studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\Resources\CreateAccount.png")
     End Sub
 
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
@@ -87,8 +94,8 @@ Public Class frmAddEmployee
             cnn.Open()
         End If
         cmd.Connection = cnn
-        cmd.CommandText = "INSERT INTO tblEmployees(empnum, tknum, lname, fname, mname, emppos, bdate, sssnum, tinnum, phealthnum, pagibignum, emptype, pinnum, acclevel, despass, conpass, picfile) " & _
-                " VALUES ('" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & DTPicker.Text & "','" _
+        cmd.CommandText = "INSERT INTO tblEmployees(ID, empnum, tknum, lname, fname, mname, emppos, bdate, sssnum, tinnum, phealthnum, pagibignum, emptype, pinnum, acclevel, despass, conpass, picfile) " & _
+                " VALUES ('" & txtID.Text & "','" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & DTPicker.Text & "','" _
                 & txtSss.Text & "','" & txtTin.Text & "','" & txtPHealth.Text & "','" & txtPagibig.Text & "','" & cmbRemarks.Text & "','" & lblPIN.Text & "','" & cmbAccess.Text & "','" & txtDesPass.Text & "','" _
                 & txtConPass.Text & "','" & txtFileName.Text & "')"
 
@@ -127,7 +134,7 @@ Public Class frmAddEmployee
             cnn.Open()
         End If
 
-        Dim da As New OleDb.OleDbDataAdapter("SELECT empnum, lname, fname, mname, emppos, bdate, emptype, pinnum, acclevel FROM tblEmployees", cnn)
+        Dim da As New OleDb.OleDbDataAdapter("SELECT ID, empnum, lname, fname, mname, emppos, bdate, emptype, pinnum, acclevel FROM tblEmployees", cnn)
 
         Dim dt As New DataTable
         da.Fill(dt)
@@ -144,6 +151,11 @@ Public Class frmAddEmployee
             Me.PictureBox1.BackgroundImage = Image.FromFile("C:\Users\User\Documents\visual studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\Resources\CreateAccount.png")
         Else
             Me.PictureBox1.BackgroundImage = New System.Drawing.Bitmap(txtFileName.Text)
+        End If
+
+        If Not txtFileName.Text = "" Then
+            btnAddPic.Hide()
+            btnRemove.Show()
         End If
 
     End Sub
@@ -176,4 +188,49 @@ Public Class frmAddEmployee
             txtConPass.Hide()
         End If
     End Sub
+
+    Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemove.Click
+
+        'Removes the filename inside txtFileName and returns the default picture in PictureBox1
+        txtFileName.Text = ""
+        Me.PictureBox1.BackgroundImage = Image.FromFile("C:\Users\User\Documents\visual studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\Resources\CreateAccount.png")
+
+        btnAddPic.Show()
+        btnRemove.Hide()
+
+    End Sub
+
+    Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
+
+        Dim cmd As New OleDb.OleDbCommand
+        If Not cnn.State = ConnectionState.Open Then
+            cnn.Open()
+        End If
+        cmd.Connection = cnn
+
+        cmd.CommandText = "UPDATE tblEmployees SET ID='" & txtID.Text & "', empnum = '" & txtEmpNum.Text & "'" & _
+                    ", tknum = '" & txtTkNo.Text & "'" & _
+                    ", lname = '" & txtlname.Text & "'" & _
+                    ", fname = '" & txtfname.Text & "'" & _
+                    ", mname = '" & txtmname.Text & "'" & _
+                    ", emppos = '" & txtPosition.Text & "'" & _
+                    ", bdate = '" & DTPicker.Text & "'" & _
+                    ", sssnum = '" & txtSss.Text & "'" & _
+                    ", tinnum = '" & txtTin.Text & "'" & _
+                    ", phealthnum = '" & txtPHealth.Text & "'" & _
+                    ", pagibig ='" & txtPagibig.Text & "'" & _
+                    ", emptype = '" & cmbRemarks.Text & "'" & _
+                    ", pinnum = '" & lblPIN.Text & "'" & _
+                    ", acclevel = '" & cmbAccess.Text & "'" & _
+                    ", despass = '" & txtDesPass.Text & "'" & _
+                    ", conpass = '" & txtConPass.Text & "'" & _
+                    ", picfile = '" & txtFileName.Text & "'" & _
+                    "WHERE ID=" & txtID.Text
+        cmd.ExecuteNonQuery()
+
+        RefreshData()
+        cnn.Close()
+
+    End Sub
+
 End Class

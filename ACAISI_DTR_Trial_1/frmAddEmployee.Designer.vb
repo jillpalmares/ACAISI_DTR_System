@@ -23,6 +23,7 @@ Partial Class frmAddEmployee
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblEmpInfoWind = New System.Windows.Forms.Label()
         Me.lblEmpNo = New System.Windows.Forms.Label()
         Me.txtEmpNum = New System.Windows.Forms.TextBox()
@@ -67,6 +68,8 @@ Partial Class frmAddEmployee
         Me.txtTin = New System.Windows.Forms.MaskedTextBox()
         Me.txtPHealth = New System.Windows.Forms.MaskedTextBox()
         Me.txtPagibig = New System.Windows.Forms.MaskedTextBox()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -74,6 +77,7 @@ Partial Class frmAddEmployee
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Maroon
+        Me.Panel1.Controls.Add(Me.txtID)
         Me.Panel1.Controls.Add(Me.lblEmpInfoWind)
         Me.Panel1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.White
@@ -81,6 +85,16 @@ Partial Class frmAddEmployee
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(857, 61)
         Me.Panel1.TabIndex = 0
+        '
+        'txtID
+        '
+        Me.txtID.Enabled = False
+        Me.txtID.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(609, 22)
+        Me.txtID.MaxLength = 3
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(127, 22)
+        Me.txtID.TabIndex = 37
         '
         'lblEmpInfoWind
         '
@@ -503,18 +517,40 @@ Partial Class frmAddEmployee
         Me.txtPagibig.Size = New System.Drawing.Size(174, 22)
         Me.txtPagibig.TabIndex = 11
         '
+        'btnRemove
+        '
+        Me.btnRemove.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRemove.Location = New System.Drawing.Point(11, 231)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(155, 33)
+        Me.btnRemove.TabIndex = 35
+        Me.btnRemove.Text = "&Remove Photo"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.Location = New System.Drawing.Point(449, 410)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(90, 33)
+        Me.btnUpdate.TabIndex = 36
+        Me.btnUpdate.Text = "U&pdate"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
         'frmAddEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 452)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnAddPic)
+        Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.txtPagibig)
         Me.Controls.Add(Me.txtPHealth)
         Me.Controls.Add(Me.txtTin)
         Me.Controls.Add(Me.txtSss)
         Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.txtFileName)
-        Me.Controls.Add(Me.btnAddPic)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.lblPIN)
@@ -606,4 +642,7 @@ Partial Class frmAddEmployee
     Friend WithEvents txtTin As System.Windows.Forms.MaskedTextBox
     Friend WithEvents txtPHealth As System.Windows.Forms.MaskedTextBox
     Friend WithEvents txtPagibig As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents btnRemove As System.Windows.Forms.Button
+    Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
 End Class
