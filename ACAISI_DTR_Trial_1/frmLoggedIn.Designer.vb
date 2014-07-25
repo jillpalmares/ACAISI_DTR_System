@@ -130,7 +130,7 @@ Partial Class frmLoggedIn
         '
         Me.lblHello.AutoSize = True
         Me.lblHello.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHello.Location = New System.Drawing.Point(80, 16)
+        Me.lblHello.Location = New System.Drawing.Point(15, 23)
         Me.lblHello.Name = "lblHello"
         Me.lblHello.Size = New System.Drawing.Size(74, 25)
         Me.lblHello.TabIndex = 18
@@ -151,20 +151,23 @@ Partial Class frmLoggedIn
         '
         Me.lblEmpName.AutoSize = True
         Me.lblEmpName.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmpName.Location = New System.Drawing.Point(80, 53)
+        Me.lblEmpName.Location = New System.Drawing.Point(75, 23)
         Me.lblEmpName.Name = "lblEmpName"
-        Me.lblEmpName.Size = New System.Drawing.Size(75, 25)
+        Me.lblEmpName.Size = New System.Drawing.Size(102, 25)
         Me.lblEmpName.TabIndex = 19
-        Me.lblEmpName.Text = "Name"
+        Me.lblEmpName.Text = "----------"
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Users_user_icon
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(40, 93)
+        Me.PictureBox1.InitialImage = Global.WindowsApplication1.My.Resources.Resources.Users_user_icon
+        Me.PictureBox1.Location = New System.Drawing.Point(37, 72)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(155, 142)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.Size = New System.Drawing.Size(160, 160)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 33
         Me.PictureBox1.TabStop = False
         '

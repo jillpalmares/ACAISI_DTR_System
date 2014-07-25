@@ -59,6 +59,8 @@ C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Tr
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\bin\Debug\ACAISI_DTR_Trial_1.exe
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\bin\Debug\ACAISI_DTR_Trial_1.pdb
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\bin\Debug\ACAISI_DTR_Trial_1.xml
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmLateTimeIn.resources
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmRegEmp.resources
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmLoggedIn.resources
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmLogScreen.resources
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmSetDefPas.resources
@@ -68,10 +70,8 @@ C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Tr
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmLogin.resources
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.Resources.resources
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.vbproj.GenerateResource.Cache
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\RdlCompile.cache
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\RdlCompile.compiled
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.exe
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.xml
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.pdb
-C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.vbprojResolveAssemblyReference.cache
-C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\RdlCompile.cache
-C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\RdlCompile.compiled
-C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmRegEmp.resources

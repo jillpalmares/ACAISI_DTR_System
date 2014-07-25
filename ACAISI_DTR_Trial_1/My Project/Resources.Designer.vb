@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _400px_Warning_icon_svg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("400px-Warning_icon.svg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property add() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("add", resourceCulture)
@@ -143,6 +153,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property PngMedium_man_male_user_icon_15874() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("PngMedium-man-male-user-icon-15874", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property print() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("print", resourceCulture)
@@ -166,6 +186,26 @@ Namespace My.Resources
         Friend ReadOnly Property report1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("report1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Users_user_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Users-user-icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Warning() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Warning", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

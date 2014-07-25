@@ -1,19 +1,27 @@
 ﻿Public Class frmLogScreen
-    'Dim dbProvider As String
-    'Dim dbSource As String
-    'Dim cnn As New OleDb.OleDbConnection
+    Dim dbProvider As String
+    Dim dbSource As String
+    Dim cnn As New OleDb.OleDbConnection
 
+    ' [1]
     ' 18 JULY 2014
     ' Unresolved Issue : Confirmation of PIN Entry if it is existing,
     '                    lookup inside tblEmployees. DB connection and
-    '                    declarations are commented out. 
+    '                    declarations are commented out. //jill
+
+    ' [2]
+    ' 25 JULY 2014
+    ' Unresolved Error : "There is no row at position 0" Error.
+    '                    Occurs if PIN entered doesn't exist.
+    '                    But accepts existing pinnum from database.
+    '                    Focus on btnLogIn Activity. //jill
 
     Private Sub frmLogScreen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        'cnn = New OleDb.OleDbConnection()
-        'dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;"
-        'dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
-        'cnn.ConnectionString = dbProvider + dbSource
+        cnn = New OleDb.OleDbConnection()
+        dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;"
+        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
+        cnn.ConnectionString = dbProvider + dbSource
 
         'System Date Timer
         Timer1.Enabled = True
@@ -40,26 +48,32 @@
     End Sub
 
     Private Sub btnLogIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogIn.Click
+            Dim cmd As New OleDb.OleDbCommand
 
-        'Dim cmd As New OleDb.OleDbCommand
+            If Not cnn.State = ConnectionState.Open Then
+                cnn.Open()
+            End If
 
-        'If Not cnn.State = ConnectionState.Open Then
-        '    cnn.Open()
-        'End If
+            cmd.Connection = cnn
 
-        'cmd.Connection = cnn
+        Dim da As New OleDb.OleDbDataAdapter("SELECT pinnum FROM tblEmployees WHERE pinnum = " & txtPin.Text, cnn)
 
-        'Dim da As New OleDb.OleDbDataAdapter("SELECT pinnum FROM tblEmployees ", cnn)
+            Dim dt As New DataTable
+            da.Fill(dt)
 
-        'Dim dt As New DataTable
-        'da.Fill(dt)
+            cnn.Close()
 
-        'cnn.Close()
+            'Search entered PIN from database if valid or existing
+            Dim dtrpin As String = dt.Rows(0).Item("pinnum")
 
-        ' Search entered PIN from database if valid or existing
-        'If txtPin.Text = dt.Columns(0).Item("d") Then
-
-        'End If
+        '[2] -------------------------------------------------------
+        If dt.Rows.Count > 0 And txtPin.Text = dtrpin Then
+            frmLoggedIn.Show()
+        ElseIf Not txtPin.Text = dtrpin Then
+            MsgBox("Invalid PIN Number.", MsgBoxStyle.RetryCancel)
+            txtPin.Text = ""
+        End If
+        '-----------------------------------------------------------
 
         ' Clears text box entry
         txtPin.Text = ""

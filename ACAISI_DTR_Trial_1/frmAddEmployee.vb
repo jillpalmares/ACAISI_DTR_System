@@ -202,6 +202,8 @@ Public Class frmAddEmployee
 
     Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
 
+        'Needed to update row record 
+
         Dim cmd As New OleDb.OleDbCommand
         If Not cnn.State = ConnectionState.Open Then
             cnn.Open()

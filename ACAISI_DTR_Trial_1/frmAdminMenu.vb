@@ -109,7 +109,7 @@ Public Class frmAdminMenu
                     cmd.Connection = cnn
                     cmd.CommandText = "DELETE FROM tblEmployees WHERE ID=" & empID
                     cmd.ExecuteNonQuery()
-                    Me.RefreshData()
+                    RefreshData()
                     cnn.Close()
                     If MessageBox.Show("Record Successfully Deleted.", "My Application", _
                     MessageBoxButtons.OK, MessageBoxIcon.Information) _
@@ -127,4 +127,5 @@ Public Class frmAdminMenu
     Private Sub btnEmpReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEmpReport.Click
         frmRegEmp.Show()
     End Sub
+
 End Class

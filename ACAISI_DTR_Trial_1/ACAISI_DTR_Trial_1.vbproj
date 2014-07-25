@@ -102,6 +102,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtrdb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmLateTimeIn.Designer.vb">
+      <DependentUpon>frmLateTimeIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLateTimeIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmRegEmp.Designer.vb">
       <DependentUpon>frmRegEmp.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmLateTimeIn.resx">
+      <DependentUpon>frmLateTimeIn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegEmp.resx">
       <DependentUpon>frmRegEmp.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +288,10 @@
     <Content Include="dtrdb1.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\400px-Warning_icon.svg.png" />
+    <None Include="Resources\PngMedium-man-male-user-icon-15874.png" />
+    <None Include="Resources\Users-user-icon.png" />
     <None Include="Resources\report.png" />
     <None Include="Resources\report1.png" />
     <None Include="Resources\print.png" />

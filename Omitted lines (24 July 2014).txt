@@ -35,3 +35,10 @@
 
 //fragment in INSERT INTO statement in btnAdd
 '" & txtID.Text & "',
+
+
+//25 July 2014
+
+If Not txtPin.Text = dtrpin Then
+            MsgBox("Invalid PIN Number.", MsgBoxStyle.RetryCancel)
+            txtPin.Text = ""
