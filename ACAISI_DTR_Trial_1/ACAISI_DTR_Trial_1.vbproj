@@ -102,6 +102,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtrdb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmLateBreaktime.Designer.vb">
+      <DependentUpon>frmLateBreaktime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLateBreaktime.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLateTimeIn.Designer.vb">
       <DependentUpon>frmLateTimeIn.vb</DependentUpon>
     </Compile>
@@ -174,6 +180,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmLateBreaktime.resx">
+      <DependentUpon>frmLateBreaktime.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLateTimeIn.resx">
       <DependentUpon>frmLateTimeIn.vb</DependentUpon>
     </EmbeddedResource>

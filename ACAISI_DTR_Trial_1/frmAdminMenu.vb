@@ -78,7 +78,7 @@ Public Class frmAdminMenu
                 frmAddEmployee.txtfname.Text = dt.Rows(0).Item("fname")
                 frmAddEmployee.txtmname.Text = dt.Rows(0).Item("mname")
                 frmAddEmployee.txtPosition.Text = dt.Rows(0).Item("emppos")
-                frmAddEmployee.DTPicker.Text = dt.Rows(0).Item("bdate")
+                'frmAddEmployee.DTPicker.Text = dt.Rows(0).Item("bdate")
                 frmAddEmployee.txtSss.Text = dt.Rows(0).Item("sssnum")
                 frmAddEmployee.txtTin.Text = dt.Rows(0).Item("tinnum")
                 frmAddEmployee.txtPHealth.Text = dt.Rows(0).Item("phealthnum")

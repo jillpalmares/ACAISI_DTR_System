@@ -4,7 +4,8 @@
     Dim cnn As New OleDb.OleDbConnection
     Dim currentDate As System.DateTime
     Dim currentHour As Integer
-
+    Dim currentMinute As Integer
+    
     ' [1]
     ' 18 JULY 2014
     ' Unresolved Issue : Reflecting of Employee's First Name based on
@@ -27,6 +28,7 @@
 
         currentDate = Date.Now()
         currentHour = currentDate.Hour
+        currentMinute = currentDate.Minute
 
         'All buttons In & Out are disabled by default
         btnAmIn.Enabled = False
@@ -146,5 +148,37 @@
         If DialogResult.OK Then
             Me.Close()
         End If
+    End Sub
+
+
+    Private Sub btnAmOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAmOut.Click
+
+        'Latest start of PM Breaktime would be 10:10pm
+        'Late breaktime starts at 10:11pm
+
+        If currentHour = 10 And currentMinute > 5 Then
+            frmLateBreaktime.Show()
+        End If
+
+    End Sub
+
+    Private Sub btnPmOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPmOut.Click
+
+        'Latest start of PM Breaktime would be 3:10pm
+        'Late breaktime starts at 3:11pm
+        If currentHour = 15 And currentMinute > 10 Then
+            frmLateBreaktime.Show()
+        End If
+
+    End Sub
+
+    Private Sub btnLunOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLunOut.Click
+
+        'Latest start of PM Breaktime would be 3:10pm
+        'Late breaktime starts at 3:11pm
+        If currentHour = 12 And currentMinute > 30 Then
+            frmLateBreaktime.Show()
+        End If
+
     End Sub
 End Class

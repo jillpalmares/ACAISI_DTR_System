@@ -32,6 +32,16 @@ Public Class frmAddEmployee
         txtDesPass.Hide()
         txtConPass.Hide()
 
+        'For Month, Day and Year's input guide
+        cmbMonth.Text = "Month"
+        cmbMonth.ForeColor = Color.Gray
+        cmbDay.Text = "Day"
+        cmbDay.ForeColor = Color.Gray
+        cmbYear.Text = "Year"
+        cmbYear.ForeColor = Color.Gray
+
+        'Update button will only be shown if the window is triggered by edit in frmAdminMenu
+        btnUpdate.Hide()
     End Sub
 
     'LIMITS KEY INPUT TO NUMBERS ONLY--
@@ -70,7 +80,8 @@ Public Class frmAddEmployee
         txtlname.Text = ""
         txtmname.Text = ""
         txtPosition.Text = ""
-        DTPicker.Text = ""
+        'DTPicker.Text = ""
+        cmbMonth.Text = ""
         txtSss.Text = ""
         txtTin.Text = ""
         txtPHealth.Text = ""
@@ -88,6 +99,9 @@ Public Class frmAddEmployee
     End Sub
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+
+        'Dim empbdate As String = cmbMonth.Text & cmbDay.Text & cmbYear.Text
+
         Dim cmd As New OleDb.OleDbCommand
         cnn.ConnectionString = dbProvider + dbSource
         If Not cnn.State = ConnectionState.Open Then
@@ -95,7 +109,7 @@ Public Class frmAddEmployee
         End If
         cmd.Connection = cnn
         cmd.CommandText = "INSERT INTO tblEmployees(ID, empnum, tknum, lname, fname, mname, emppos, bdate, sssnum, tinnum, phealthnum, pagibignum, emptype, pinnum, acclevel, despass, conpass, picfile) " & _
-                " VALUES ('" & txtID.Text & "','" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & DTPicker.Text & "','" _
+                " VALUES ('" & txtID.Text & "','" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & empbdate & "','" _
                 & txtSss.Text & "','" & txtTin.Text & "','" & txtPHealth.Text & "','" & txtPagibig.Text & "','" & cmbRemarks.Text & "','" & lblPIN.Text & "','" & cmbAccess.Text & "','" & txtDesPass.Text & "','" _
                 & txtConPass.Text & "','" & txtFileName.Text & "')"
 
@@ -108,7 +122,12 @@ Public Class frmAddEmployee
         txtfname.Text = ""
         txtmname.Text = ""
         txtPosition.Text = ""
-        DTPicker.Text = ""
+        cmbMonth.Text = "Month"
+        cmbMonth.ForeColor = Color.Gray
+        cmbDay.Text = "Day"
+        cmbDay.ForeColor = Color.Gray
+        cmbYear.Text = "Year"
+        cmbYear.ForeColor = Color.Gray
         txtSss.Text = ""
         txtTin.Text = ""
         txtPHealth.Text = ""
@@ -202,7 +221,7 @@ Public Class frmAddEmployee
 
     Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
 
-        'Needed to update row record 
+        'Button needed to update row record 
 
         Dim cmd As New OleDb.OleDbCommand
         If Not cnn.State = ConnectionState.Open Then
@@ -216,7 +235,6 @@ Public Class frmAddEmployee
                     ", fname = '" & txtfname.Text & "'" & _
                     ", mname = '" & txtmname.Text & "'" & _
                     ", emppos = '" & txtPosition.Text & "'" & _
-                    ", bdate = '" & DTPicker.Text & "'" & _
                     ", sssnum = '" & txtSss.Text & "'" & _
                     ", tinnum = '" & txtTin.Text & "'" & _
                     ", phealthnum = '" & txtPHealth.Text & "'" & _
@@ -235,4 +253,15 @@ Public Class frmAddEmployee
 
     End Sub
 
+    Private Sub cmbMonth_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbMonth.SelectedIndexChanged
+        cmbMonth.ForeColor = Color.Black
+    End Sub
+
+    Private Sub cmbDay_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbDay.SelectedIndexChanged
+        cmbDay.ForeColor = Color.Black
+    End Sub
+
+    Private Sub cmbYear_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbYear.SelectedIndexChanged
+        cmbYear.ForeColor = Color.Black
+    End Sub
 End Class

@@ -39,7 +39,6 @@ Partial Class frmAddEmployee
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DTPicker = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -70,6 +69,12 @@ Partial Class frmAddEmployee
         Me.txtPagibig = New System.Windows.Forms.MaskedTextBox()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.cmbMonth = New System.Windows.Forms.ComboBox()
+        Me.cmbDay = New System.Windows.Forms.ComboBox()
+        Me.cmbYear = New System.Windows.Forms.ComboBox()
+        Me.cmbLTS = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtLTS = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,6 +100,7 @@ Partial Class frmAddEmployee
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(127, 22)
         Me.txtID.TabIndex = 37
+        Me.txtID.Visible = False
         '
         'lblEmpInfoWind
         '
@@ -236,14 +242,6 @@ Partial Class frmAddEmployee
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Birthdate :"
         '
-        'DTPicker
-        '
-        Me.DTPicker.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPicker.Location = New System.Drawing.Point(520, 160)
-        Me.DTPicker.Name = "DTPicker"
-        Me.DTPicker.Size = New System.Drawing.Size(219, 22)
-        Me.DTPicker.TabIndex = 7
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -304,8 +302,8 @@ Partial Class frmAddEmployee
         Me.cmbRemarks.Items.AddRange(New Object() {"Regular", "Contractual", "Probationary", "Special Project", "OJT"})
         Me.cmbRemarks.Location = New System.Drawing.Point(303, 258)
         Me.cmbRemarks.Name = "cmbRemarks"
-        Me.cmbRemarks.Size = New System.Drawing.Size(189, 25)
-        Me.cmbRemarks.TabIndex = 12
+        Me.cmbRemarks.Size = New System.Drawing.Size(127, 25)
+        Me.cmbRemarks.TabIndex = 14
         '
         'btnAdd
         '
@@ -313,7 +311,7 @@ Partial Class frmAddEmployee
         Me.btnAdd.Location = New System.Drawing.Point(449, 410)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(90, 33)
-        Me.btnAdd.TabIndex = 17
+        Me.btnAdd.TabIndex = 19
         Me.btnAdd.Text = "&Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -323,7 +321,7 @@ Partial Class frmAddEmployee
         Me.btnReset.Location = New System.Drawing.Point(545, 410)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(90, 33)
-        Me.btnReset.TabIndex = 18
+        Me.btnReset.TabIndex = 20
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
@@ -333,7 +331,7 @@ Partial Class frmAddEmployee
         Me.btnCancel.Location = New System.Drawing.Point(641, 410)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(90, 33)
-        Me.btnCancel.TabIndex = 19
+        Me.btnCancel.TabIndex = 21
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
@@ -417,7 +415,7 @@ Partial Class frmAddEmployee
         Me.cmbAccess.Location = New System.Drawing.Point(108, 306)
         Me.cmbAccess.Name = "cmbAccess"
         Me.cmbAccess.Size = New System.Drawing.Size(219, 25)
-        Me.cmbAccess.TabIndex = 13
+        Me.cmbAccess.TabIndex = 17
         '
         'lblPIN
         '
@@ -477,7 +475,7 @@ Partial Class frmAddEmployee
         Me.btnGenerate.Location = New System.Drawing.Point(448, 304)
         Me.btnGenerate.Name = "btnGenerate"
         Me.btnGenerate.Size = New System.Drawing.Size(126, 33)
-        Me.btnGenerate.TabIndex = 16
+        Me.btnGenerate.TabIndex = 18
         Me.btnGenerate.Text = "&Generate PIN"
         Me.btnGenerate.UseVisualStyleBackColor = True
         '
@@ -488,7 +486,7 @@ Partial Class frmAddEmployee
         Me.txtSss.Mask = "00-0000000-0"
         Me.txtSss.Name = "txtSss"
         Me.txtSss.Size = New System.Drawing.Size(174, 22)
-        Me.txtSss.TabIndex = 8
+        Me.txtSss.TabIndex = 10
         '
         'txtTin
         '
@@ -497,7 +495,7 @@ Partial Class frmAddEmployee
         Me.txtTin.Mask = "000-000-000-000"
         Me.txtTin.Name = "txtTin"
         Me.txtTin.Size = New System.Drawing.Size(209, 22)
-        Me.txtTin.TabIndex = 9
+        Me.txtTin.TabIndex = 11
         '
         'txtPHealth
         '
@@ -506,7 +504,7 @@ Partial Class frmAddEmployee
         Me.txtPHealth.Mask = "00-000000000-0"
         Me.txtPHealth.Name = "txtPHealth"
         Me.txtPHealth.Size = New System.Drawing.Size(158, 22)
-        Me.txtPHealth.TabIndex = 10
+        Me.txtPHealth.TabIndex = 12
         '
         'txtPagibig
         '
@@ -515,7 +513,7 @@ Partial Class frmAddEmployee
         Me.txtPagibig.Mask = "0000-0000-0000"
         Me.txtPagibig.Name = "txtPagibig"
         Me.txtPagibig.Size = New System.Drawing.Size(174, 22)
-        Me.txtPagibig.TabIndex = 11
+        Me.txtPagibig.TabIndex = 13
         '
         'btnRemove
         '
@@ -537,12 +535,79 @@ Partial Class frmAddEmployee
         Me.btnUpdate.Text = "U&pdate"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
+        'cmbMonth
+        '
+        Me.cmbMonth.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.cmbMonth.FormattingEnabled = True
+        Me.cmbMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
+        Me.cmbMonth.Location = New System.Drawing.Point(521, 159)
+        Me.cmbMonth.Name = "cmbMonth"
+        Me.cmbMonth.Size = New System.Drawing.Size(97, 25)
+        Me.cmbMonth.TabIndex = 7
+        '
+        'cmbDay
+        '
+        Me.cmbDay.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.cmbDay.FormattingEnabled = True
+        Me.cmbDay.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
+        Me.cmbDay.Location = New System.Drawing.Point(624, 159)
+        Me.cmbDay.Name = "cmbDay"
+        Me.cmbDay.Size = New System.Drawing.Size(49, 25)
+        Me.cmbDay.TabIndex = 8
+        '
+        'cmbYear
+        '
+        Me.cmbYear.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.cmbYear.FormattingEnabled = True
+        Me.cmbYear.Items.AddRange(New Object() {"1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"})
+        Me.cmbYear.Location = New System.Drawing.Point(679, 159)
+        Me.cmbYear.Name = "cmbYear"
+        Me.cmbYear.Size = New System.Drawing.Size(60, 25)
+        Me.cmbYear.TabIndex = 9
+        '
+        'cmbLTS
+        '
+        Me.cmbLTS.AllowDrop = True
+        Me.cmbLTS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbLTS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbLTS.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbLTS.FormattingEnabled = True
+        Me.cmbLTS.Items.AddRange(New Object() {"A", "B", "C"})
+        Me.cmbLTS.Location = New System.Drawing.Point(579, 258)
+        Me.cmbLTS.Name = "cmbLTS"
+        Me.cmbLTS.Size = New System.Drawing.Size(39, 25)
+        Me.cmbLTS.TabIndex = 15
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(465, 264)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(110, 17)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "Lunch Time Slot:"
+        '
+        'txtLTS
+        '
+        Me.txtLTS.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLTS.Location = New System.Drawing.Point(624, 259)
+        Me.txtLTS.MaxLength = 3
+        Me.txtLTS.Name = "txtLTS"
+        Me.txtLTS.Size = New System.Drawing.Size(115, 22)
+        Me.txtLTS.TabIndex = 16
+        '
         'frmAddEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 452)
-        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.txtLTS)
+        Me.Controls.Add(Me.cmbLTS)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.cmbYear)
+        Me.Controls.Add(Me.cmbDay)
+        Me.Controls.Add(Me.cmbMonth)
         Me.Controls.Add(Me.btnAddPic)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.txtPagibig)
@@ -569,7 +634,6 @@ Partial Class frmAddEmployee
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.DTPicker)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtPosition)
         Me.Controls.Add(Me.Label4)
@@ -585,6 +649,7 @@ Partial Class frmAddEmployee
         Me.Controls.Add(Me.txtEmpNum)
         Me.Controls.Add(Me.lblEmpNo)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmAddEmployee"
@@ -613,7 +678,6 @@ Partial Class frmAddEmployee
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtPosition As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents DTPicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -645,4 +709,10 @@ Partial Class frmAddEmployee
     Friend WithEvents btnRemove As System.Windows.Forms.Button
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents cmbDay As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbYear As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbLTS As System.Windows.Forms.ComboBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents txtLTS As System.Windows.Forms.TextBox
+    Friend WithEvents cmbMonth As System.Windows.Forms.ComboBox
 End Class
