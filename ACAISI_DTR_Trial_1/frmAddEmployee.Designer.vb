@@ -22,6 +22,7 @@ Partial Class frmAddEmployee
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblEmpInfoWind = New System.Windows.Forms.Label()
@@ -74,9 +75,11 @@ Partial Class frmAddEmployee
         Me.cmbYear = New System.Windows.Forms.ComboBox()
         Me.cmbLTS = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtLTS = New System.Windows.Forms.TextBox()
+        Me.lblLTS = New System.Windows.Forms.Label()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -588,21 +591,27 @@ Partial Class frmAddEmployee
         Me.Label11.TabIndex = 41
         Me.Label11.Text = "Lunch Time Slot:"
         '
-        'txtLTS
+        'lblLTS
         '
-        Me.txtLTS.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLTS.Location = New System.Drawing.Point(624, 259)
-        Me.txtLTS.MaxLength = 3
-        Me.txtLTS.Name = "txtLTS"
-        Me.txtLTS.Size = New System.Drawing.Size(115, 22)
-        Me.txtLTS.TabIndex = 16
+        Me.lblLTS.BackColor = System.Drawing.Color.White
+        Me.lblLTS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblLTS.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLTS.Location = New System.Drawing.Point(624, 259)
+        Me.lblLTS.Name = "lblLTS"
+        Me.lblLTS.Size = New System.Drawing.Size(113, 22)
+        Me.lblLTS.TabIndex = 16
+        Me.lblLTS.Text = "                         "
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'frmAddEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 452)
-        Me.Controls.Add(Me.txtLTS)
+        Me.Controls.Add(Me.lblLTS)
         Me.Controls.Add(Me.cmbLTS)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.cmbYear)
@@ -658,6 +667,7 @@ Partial Class frmAddEmployee
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -713,6 +723,7 @@ Partial Class frmAddEmployee
     Friend WithEvents cmbYear As System.Windows.Forms.ComboBox
     Friend WithEvents cmbLTS As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents txtLTS As System.Windows.Forms.TextBox
     Friend WithEvents cmbMonth As System.Windows.Forms.ComboBox
+    Friend WithEvents lblLTS As System.Windows.Forms.Label
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

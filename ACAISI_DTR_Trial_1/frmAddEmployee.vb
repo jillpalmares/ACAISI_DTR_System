@@ -42,6 +42,11 @@ Public Class frmAddEmployee
 
         'Update button will only be shown if the window is triggered by edit in frmAdminMenu
         btnUpdate.Hide()
+
+        'Tooltip declaration
+        Dim tooltipError As New ToolTip()
+        tooltipError.IsBalloon = True
+
     End Sub
 
     'LIMITS KEY INPUT TO NUMBERS ONLY--
@@ -74,6 +79,9 @@ Public Class frmAddEmployee
     End Sub
 
     Private Sub btnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReset.Click
+
+        'Clears ALL spaces to be filled out
+
         txtEmpNum.Text = ""
         txtTkNo.Text = ""
         txtfname.Text = ""
@@ -81,17 +89,25 @@ Public Class frmAddEmployee
         txtmname.Text = ""
         txtPosition.Text = ""
         'DTPicker.Text = ""
-        cmbMonth.Text = ""
+        cmbMonth.Text = "Month"
+        cmbMonth.ForeColor = Color.Gray
+        cmbDay.Text = "Day"
+        cmbDay.ForeColor = Color.Gray
+        cmbYear.Text = "Year"
+        cmbYear.ForeColor = Color.Gray
         txtSss.Text = ""
         txtTin.Text = ""
         txtPHealth.Text = ""
         txtPagibig.Text = ""
         cmbRemarks.Text = ""
+        cmbLTS.Text = ""
+        lblLTS.Text = ""
         lblPIN.Text = "----"
         btnAddPic.Show()
         btnRemove.Hide()
         txtFileName.Text = ""
         Me.PictureBox1.BackgroundImage = Image.FromFile("C:\Users\User\Documents\visual studio 2010\Projects\ACAISI_DTR_Trial_1\ACAISI_DTR_Trial_1\Resources\CreateAccount.png")
+
     End Sub
 
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
@@ -99,6 +115,27 @@ Public Class frmAddEmployee
     End Sub
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+
+        'ERROR TRAPPING===============================================================================
+
+        '[1] Check if Last Name, First Name and Middle Name are completely filled out
+        If txtfname.Text.Trim = "" Then
+            ErrorProvider1.SetError(txtfname, "You must provide the first name.")
+        Else
+            ErrorProvider1.SetError(txtfname, "")
+        End If
+
+        If txtmname.Text.Trim = "" Then
+            ErrorProvider1.SetError(txtmname, "You must provide the middle name.")
+        Else
+            ErrorProvider1.SetError(txtmname, "")
+        End If
+
+        If txtlname.Text.Trim = "" Then
+            ErrorProvider1.SetError(txtlname, "You must provide the last name.")
+        Else
+            ErrorProvider1.SetError(txtlname, "")
+        End If
 
         'Dim empbdate As String = cmbMonth.Text & cmbDay.Text & cmbYear.Text
 
@@ -109,13 +146,15 @@ Public Class frmAddEmployee
         End If
         cmd.Connection = cnn
         cmd.CommandText = "INSERT INTO tblEmployees(ID, empnum, tknum, lname, fname, mname, emppos, bdate, sssnum, tinnum, phealthnum, pagibignum, emptype, pinnum, acclevel, despass, conpass, picfile) " & _
-                " VALUES ('" & txtID.Text & "','" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" & empbdate & "','" _
+                " VALUES ('" & txtID.Text & "','" & txtEmpNum.Text & "','" & txtTkNo.Text & "','" & txtlname.Text & "','" & txtfname.Text & "','" & txtmname.Text & "','" & txtPosition.Text & "','" _
                 & txtSss.Text & "','" & txtTin.Text & "','" & txtPHealth.Text & "','" & txtPagibig.Text & "','" & cmbRemarks.Text & "','" & lblPIN.Text & "','" & cmbAccess.Text & "','" & txtDesPass.Text & "','" _
                 & txtConPass.Text & "','" & txtFileName.Text & "')"
 
         cmd.ExecuteNonQuery()
         cnn.Close()
 
+
+        'Clears all spaces for next entry
         txtEmpNum.Text = ""
         txtTkNo.Text = ""
         txtlname.Text = ""
@@ -133,6 +172,8 @@ Public Class frmAddEmployee
         txtPHealth.Text = ""
         txtPagibig.Text = ""
         cmbRemarks.Text = ""
+        cmbLTS.Text = ""
+        lblLTS.Text = ""
         cmbAccess.Text = ""
         txtDesPass.Text = ""
         txtConPass.Text = ""
@@ -264,4 +305,15 @@ Public Class frmAddEmployee
     Private Sub cmbYear_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbYear.SelectedIndexChanged
         cmbYear.ForeColor = Color.Black
     End Sub
+
+    Private Sub cmbLTS_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbLTS.SelectedIndexChanged
+        If cmbLTS.Text = "A" Then
+            lblLTS.Text = "11:30-12:30"
+        ElseIf cmbLTS.Text = "B" Then
+            lblLTS.Text = "12:00-01:00"
+        ElseIf cmbLTS.Text = "C" Then
+            lblLTS.Text = "12:30-01:30"
+        End If
+    End Sub
+
 End Class

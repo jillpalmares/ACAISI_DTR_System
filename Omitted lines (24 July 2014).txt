@@ -42,3 +42,42 @@
 If Not txtPin.Text = dtrpin Then
             MsgBox("Invalid PIN Number.", MsgBoxStyle.RetryCancel)
             txtPin.Text = ""
+
+
+//30 July 2014
+
+Dim tooltipError As New ToolTip()
+
+        'ERROR TRAPPING===============================================================================
+
+        '[1] To check if SSS, TIN, Pag-ibig, PhilHealth's masked textboxes are completely filled out
+        If txtSss.MaskFull = False Then
+            'MsgBox("Please provide a valid SSS Number.")
+            tooltipError.IsBalloon = True
+            tooltipError.Show("Please provide complete SSS Number.", txtSss, 0, -20, 5000)
+        End If
+
+        If txtTin.MaskCompleted = False Then
+            'MsgBox("Please provide a valid TIN Number.")
+        End If
+
+        If txtPagibig.MaskCompleted = False Then
+            'MsgBox("Please provide a valid Pag-Ibig MID Number.")
+        End If
+
+        If txtPHealth.MaskCompleted = False Then
+            'MsgBox("Please provide a valid Philhealth PIN.")
+        End If
+        '[1]------------------------------------------------------------------------------------------
+
+        '[2]
+
+
+//OJT 
+
+
+    Private Sub cmbRemarks_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbRemarks.SelectedIndexChanged
+        If cmbRemarks.Text = "OJT" Then
+
+        End If
+    End Sub

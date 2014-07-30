@@ -102,6 +102,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtrdb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmPMOB.Designer.vb">
+      <DependentUpon>frmPMOB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPMOB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLunchOB.Designer.vb">
+      <DependentUpon>frmLunchOB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLunchOB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAMOB.Designer.vb">
+      <DependentUpon>frmAMOB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAMOB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLateBreaktime.Designer.vb">
       <DependentUpon>frmLateBreaktime.vb</DependentUpon>
     </Compile>
@@ -180,6 +198,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmPMOB.resx">
+      <DependentUpon>frmPMOB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLunchOB.resx">
+      <DependentUpon>frmLunchOB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAMOB.resx">
+      <DependentUpon>frmAMOB.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLateBreaktime.resx">
       <DependentUpon>frmLateBreaktime.vb</DependentUpon>
     </EmbeddedResource>
