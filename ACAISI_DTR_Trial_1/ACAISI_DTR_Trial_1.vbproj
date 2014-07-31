@@ -102,6 +102,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtrdb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmInactiveEmp.Designer.vb">
+      <DependentUpon>frmInactiveEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInactiveEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPMOB.Designer.vb">
       <DependentUpon>frmPMOB.vb</DependentUpon>
     </Compile>
@@ -156,10 +162,10 @@
     <Compile Include="frmSetDefPas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdminOpt.Designer.vb">
-      <DependentUpon>frmAdminOpt.vb</DependentUpon>
+    <Compile Include="frmDelEmp.Designer.vb">
+      <DependentUpon>frmDelEmp.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAdminOpt.vb">
+    <Compile Include="frmDelEmp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddEmployee.Designer.vb">
@@ -198,6 +204,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmInactiveEmp.resx">
+      <DependentUpon>frmInactiveEmp.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPMOB.resx">
       <DependentUpon>frmPMOB.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,8 +234,8 @@
     <EmbeddedResource Include="frmSetDefPas.resx">
       <DependentUpon>frmSetDefPas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminOpt.resx">
-      <DependentUpon>frmAdminOpt.vb</DependentUpon>
+    <EmbeddedResource Include="frmDelEmp.resx">
+      <DependentUpon>frmDelEmp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.vb</DependentUpon>

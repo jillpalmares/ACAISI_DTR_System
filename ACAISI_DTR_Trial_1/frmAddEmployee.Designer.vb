@@ -34,17 +34,17 @@ Partial Class frmAddEmployee
         Me.txtlname = New System.Windows.Forms.TextBox()
         Me.txtfname = New System.Windows.Forms.TextBox()
         Me.txtmname = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbllname = New System.Windows.Forms.Label()
+        Me.lblfname = New System.Windows.Forms.Label()
+        Me.lblmname = New System.Windows.Forms.Label()
+        Me.lblPosition = New System.Windows.Forms.Label()
         Me.txtPosition = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblBdate = New System.Windows.Forms.Label()
+        Me.lblSss = New System.Windows.Forms.Label()
+        Me.lblTin = New System.Windows.Forms.Label()
+        Me.lblPHealth = New System.Windows.Forms.Label()
+        Me.lblPagibig = New System.Windows.Forms.Label()
+        Me.lblEmpType = New System.Windows.Forms.Label()
         Me.cmbRemarks = New System.Windows.Forms.ComboBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
@@ -55,10 +55,10 @@ Partial Class frmAddEmployee
         Me.lblDesPass = New System.Windows.Forms.Label()
         Me.txtConPass = New System.Windows.Forms.TextBox()
         Me.lblConPass = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblacclevel = New System.Windows.Forms.Label()
         Me.cmbAccess = New System.Windows.Forms.ComboBox()
         Me.lblPIN = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lblpinnum = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnAddPic = New System.Windows.Forms.Button()
         Me.txtFileName = New System.Windows.Forms.TextBox()
@@ -74,7 +74,7 @@ Partial Class frmAddEmployee
         Me.cmbDay = New System.Windows.Forms.ComboBox()
         Me.cmbYear = New System.Windows.Forms.ComboBox()
         Me.cmbLTS = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblltslot = New System.Windows.Forms.Label()
         Me.lblLTS = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
@@ -187,45 +187,45 @@ Partial Class frmAddEmployee
         Me.txtmname.Size = New System.Drawing.Size(144, 22)
         Me.txtmname.TabIndex = 5
         '
-        'Label1
+        'lbllname
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(308, 132)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(32, 16)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Last"
+        Me.lbllname.AutoSize = True
+        Me.lbllname.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbllname.Location = New System.Drawing.Point(308, 132)
+        Me.lbllname.Name = "lbllname"
+        Me.lbllname.Size = New System.Drawing.Size(32, 16)
+        Me.lbllname.TabIndex = 9
+        Me.lbllname.Text = "Last"
         '
-        'Label2
+        'lblfname
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(478, 131)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(31, 16)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "First"
+        Me.lblfname.AutoSize = True
+        Me.lblfname.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblfname.Location = New System.Drawing.Point(478, 131)
+        Me.lblfname.Name = "lblfname"
+        Me.lblfname.Size = New System.Drawing.Size(31, 16)
+        Me.lblfname.TabIndex = 10
+        Me.lblfname.Text = "First"
         '
-        'Label3
+        'lblmname
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(644, 131)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 16)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Middle"
+        Me.lblmname.AutoSize = True
+        Me.lblmname.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmname.Location = New System.Drawing.Point(644, 131)
+        Me.lblmname.Name = "lblmname"
+        Me.lblmname.Size = New System.Drawing.Size(48, 16)
+        Me.lblmname.TabIndex = 11
+        Me.lblmname.Text = "Middle"
         '
-        'Label4
+        'lblPosition
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(190, 164)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 17)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Position :"
+        Me.lblPosition.AutoSize = True
+        Me.lblPosition.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPosition.Location = New System.Drawing.Point(190, 164)
+        Me.lblPosition.Name = "lblPosition"
+        Me.lblPosition.Size = New System.Drawing.Size(66, 17)
+        Me.lblPosition.TabIndex = 12
+        Me.lblPosition.Text = "Position :"
         '
         'txtPosition
         '
@@ -235,65 +235,65 @@ Partial Class frmAddEmployee
         Me.txtPosition.Size = New System.Drawing.Size(174, 22)
         Me.txtPosition.TabIndex = 6
         '
-        'Label5
+        'lblBdate
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(445, 164)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(74, 17)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Birthdate :"
+        Me.lblBdate.AutoSize = True
+        Me.lblBdate.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBdate.Location = New System.Drawing.Point(445, 164)
+        Me.lblBdate.Name = "lblBdate"
+        Me.lblBdate.Size = New System.Drawing.Size(74, 17)
+        Me.lblBdate.TabIndex = 13
+        Me.lblBdate.Text = "Birthdate :"
         '
-        'Label6
+        'lblSss
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(190, 200)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 17)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "SSS No. :"
+        Me.lblSss.AutoSize = True
+        Me.lblSss.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSss.Location = New System.Drawing.Point(190, 200)
+        Me.lblSss.Name = "lblSss"
+        Me.lblSss.Size = New System.Drawing.Size(61, 17)
+        Me.lblSss.TabIndex = 14
+        Me.lblSss.Text = "SSS No. :"
         '
-        'Label7
+        'lblTin
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(465, 200)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(61, 17)
-        Me.Label7.TabIndex = 16
-        Me.Label7.Text = "TIN No. :"
+        Me.lblTin.AutoSize = True
+        Me.lblTin.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTin.Location = New System.Drawing.Point(465, 200)
+        Me.lblTin.Name = "lblTin"
+        Me.lblTin.Size = New System.Drawing.Size(61, 17)
+        Me.lblTin.TabIndex = 16
+        Me.lblTin.Text = "TIN No. :"
         '
-        'Label8
+        'lblPHealth
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(190, 230)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(79, 17)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Philhealth :"
+        Me.lblPHealth.AutoSize = True
+        Me.lblPHealth.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPHealth.Location = New System.Drawing.Point(190, 230)
+        Me.lblPHealth.Name = "lblPHealth"
+        Me.lblPHealth.Size = New System.Drawing.Size(79, 17)
+        Me.lblPHealth.TabIndex = 18
+        Me.lblPHealth.Text = "Philhealth :"
         '
-        'Label9
+        'lblPagibig
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(465, 230)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(97, 17)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Pag-Ibig No. :"
+        Me.lblPagibig.AutoSize = True
+        Me.lblPagibig.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPagibig.Location = New System.Drawing.Point(465, 230)
+        Me.lblPagibig.Name = "lblPagibig"
+        Me.lblPagibig.Size = New System.Drawing.Size(97, 17)
+        Me.lblPagibig.TabIndex = 20
+        Me.lblPagibig.Text = "Pag-Ibig No. :"
         '
-        'Label10
+        'lblEmpType
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(189, 264)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(111, 17)
-        Me.Label10.TabIndex = 22
-        Me.Label10.Text = "Employee Type :"
+        Me.lblEmpType.AutoSize = True
+        Me.lblEmpType.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmpType.Location = New System.Drawing.Point(189, 264)
+        Me.lblEmpType.Name = "lblEmpType"
+        Me.lblEmpType.Size = New System.Drawing.Size(111, 17)
+        Me.lblEmpType.TabIndex = 22
+        Me.lblEmpType.Text = "Employee Type :"
         '
         'cmbRemarks
         '
@@ -397,15 +397,15 @@ Partial Class frmAddEmployee
         Me.lblConPass.TabIndex = 27
         Me.lblConPass.Text = "Confirm Password :"
         '
-        'Label13
+        'lblacclevel
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(6, 312)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 17)
-        Me.Label13.TabIndex = 29
-        Me.Label13.Text = "Access Level :"
+        Me.lblacclevel.AutoSize = True
+        Me.lblacclevel.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblacclevel.Location = New System.Drawing.Point(6, 312)
+        Me.lblacclevel.Name = "lblacclevel"
+        Me.lblacclevel.Size = New System.Drawing.Size(96, 17)
+        Me.lblacclevel.TabIndex = 29
+        Me.lblacclevel.Text = "Access Level :"
         '
         'cmbAccess
         '
@@ -430,15 +430,15 @@ Partial Class frmAddEmployee
         Me.lblPIN.TabIndex = 30
         Me.lblPIN.Text = "----"
         '
-        'Label14
+        'lblpinnum
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(450, 357)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(93, 17)
-        Me.Label14.TabIndex = 31
-        Me.Label14.Text = "PIN Number :"
+        Me.lblpinnum.AutoSize = True
+        Me.lblpinnum.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblpinnum.Location = New System.Drawing.Point(450, 357)
+        Me.lblpinnum.Name = "lblpinnum"
+        Me.lblpinnum.Size = New System.Drawing.Size(93, 17)
+        Me.lblpinnum.TabIndex = 31
+        Me.lblpinnum.Text = "PIN Number :"
         '
         'PictureBox1
         '
@@ -581,15 +581,15 @@ Partial Class frmAddEmployee
         Me.cmbLTS.Size = New System.Drawing.Size(39, 25)
         Me.cmbLTS.TabIndex = 15
         '
-        'Label11
+        'lblltslot
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(465, 264)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(110, 17)
-        Me.Label11.TabIndex = 41
-        Me.Label11.Text = "Lunch Time Slot:"
+        Me.lblltslot.AutoSize = True
+        Me.lblltslot.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblltslot.Location = New System.Drawing.Point(465, 264)
+        Me.lblltslot.Name = "lblltslot"
+        Me.lblltslot.Size = New System.Drawing.Size(110, 17)
+        Me.lblltslot.TabIndex = 41
+        Me.lblltslot.Text = "Lunch Time Slot:"
         '
         'lblLTS
         '
@@ -613,7 +613,7 @@ Partial Class frmAddEmployee
         Me.ClientSize = New System.Drawing.Size(748, 452)
         Me.Controls.Add(Me.lblLTS)
         Me.Controls.Add(Me.cmbLTS)
-        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.lblltslot)
         Me.Controls.Add(Me.cmbYear)
         Me.Controls.Add(Me.cmbDay)
         Me.Controls.Add(Me.cmbMonth)
@@ -626,10 +626,10 @@ Partial Class frmAddEmployee
         Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.txtFileName)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.lblpinnum)
         Me.Controls.Add(Me.lblPIN)
         Me.Controls.Add(Me.cmbAccess)
-        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.lblacclevel)
         Me.Controls.Add(Me.txtConPass)
         Me.Controls.Add(Me.lblConPass)
         Me.Controls.Add(Me.txtDesPass)
@@ -638,17 +638,17 @@ Partial Class frmAddEmployee
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.cmbRemarks)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblEmpType)
+        Me.Controls.Add(Me.lblPagibig)
+        Me.Controls.Add(Me.lblPHealth)
+        Me.Controls.Add(Me.lblTin)
+        Me.Controls.Add(Me.lblSss)
+        Me.Controls.Add(Me.lblBdate)
         Me.Controls.Add(Me.txtPosition)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblPosition)
+        Me.Controls.Add(Me.lblmname)
+        Me.Controls.Add(Me.lblfname)
+        Me.Controls.Add(Me.lbllname)
         Me.Controls.Add(Me.txtmname)
         Me.Controls.Add(Me.txtfname)
         Me.Controls.Add(Me.txtlname)
@@ -682,17 +682,17 @@ Partial Class frmAddEmployee
     Friend WithEvents txtlname As System.Windows.Forms.TextBox
     Friend WithEvents txtfname As System.Windows.Forms.TextBox
     Friend WithEvents txtmname As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lbllname As System.Windows.Forms.Label
+    Friend WithEvents lblfname As System.Windows.Forms.Label
+    Friend WithEvents lblmname As System.Windows.Forms.Label
+    Friend WithEvents lblPosition As System.Windows.Forms.Label
     Friend WithEvents txtPosition As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents lblBdate As System.Windows.Forms.Label
+    Friend WithEvents lblSss As System.Windows.Forms.Label
+    Friend WithEvents lblTin As System.Windows.Forms.Label
+    Friend WithEvents lblPHealth As System.Windows.Forms.Label
+    Friend WithEvents lblPagibig As System.Windows.Forms.Label
+    Friend WithEvents lblEmpType As System.Windows.Forms.Label
     Friend WithEvents cmbRemarks As System.Windows.Forms.ComboBox
     Friend WithEvents btnAdd As System.Windows.Forms.Button
     Friend WithEvents btnReset As System.Windows.Forms.Button
@@ -703,10 +703,10 @@ Partial Class frmAddEmployee
     Friend WithEvents lblDesPass As System.Windows.Forms.Label
     Friend WithEvents txtConPass As System.Windows.Forms.TextBox
     Friend WithEvents lblConPass As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents lblacclevel As System.Windows.Forms.Label
     Friend WithEvents cmbAccess As System.Windows.Forms.ComboBox
     Friend WithEvents lblPIN As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents lblpinnum As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnAddPic As System.Windows.Forms.Button
     Friend WithEvents txtFileName As System.Windows.Forms.TextBox
@@ -722,7 +722,7 @@ Partial Class frmAddEmployee
     Friend WithEvents cmbDay As System.Windows.Forms.ComboBox
     Friend WithEvents cmbYear As System.Windows.Forms.ComboBox
     Friend WithEvents cmbLTS As System.Windows.Forms.ComboBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents lblltslot As System.Windows.Forms.Label
     Friend WithEvents cmbMonth As System.Windows.Forms.ComboBox
     Friend WithEvents lblLTS As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider

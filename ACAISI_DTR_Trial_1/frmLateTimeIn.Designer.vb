@@ -23,16 +23,16 @@ Partial Class frmLateTimeIn
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblTime = New System.Windows.Forms.Label()
+        Me.lblTimeLTI = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.rbOthers = New System.Windows.Forms.RadioButton()
+        Me.rbLTIOthers = New System.Windows.Forms.RadioButton()
         Me.rbHalfday = New System.Windows.Forms.RadioButton()
         Me.rbOnsite = New System.Windows.Forms.RadioButton()
         Me.rbEightam = New System.Windows.Forms.RadioButton()
-        Me.txtReason = New System.Windows.Forms.TextBox()
-        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.txtLTIReason = New System.Windows.Forms.TextBox()
+        Me.btnLTISubmit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -41,7 +41,7 @@ Partial Class frmLateTimeIn
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.lblTime)
+        Me.Panel1.Controls.Add(Me.lblTimeLTI)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(-1, 10)
@@ -49,18 +49,18 @@ Partial Class frmLateTimeIn
         Me.Panel1.Size = New System.Drawing.Size(389, 112)
         Me.Panel1.TabIndex = 20
         '
-        'lblTime
+        'lblTimeLTI
         '
-        Me.lblTime.AutoSize = True
-        Me.lblTime.BackColor = System.Drawing.Color.Transparent
-        Me.lblTime.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(141, 41)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(212, 56)
-        Me.lblTime.TabIndex = 8
-        Me.lblTime.Text = "00:00:00"
-        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTimeLTI.AutoSize = True
+        Me.lblTimeLTI.BackColor = System.Drawing.Color.Transparent
+        Me.lblTimeLTI.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimeLTI.ForeColor = System.Drawing.Color.Red
+        Me.lblTimeLTI.Location = New System.Drawing.Point(141, 41)
+        Me.lblTimeLTI.Name = "lblTimeLTI"
+        Me.lblTimeLTI.Size = New System.Drawing.Size(212, 56)
+        Me.lblTimeLTI.TabIndex = 8
+        Me.lblTimeLTI.Text = "00:00:00"
+        Me.lblTimeLTI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -85,11 +85,11 @@ Partial Class frmLateTimeIn
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox1.Controls.Add(Me.rbOthers)
+        Me.GroupBox1.Controls.Add(Me.rbLTIOthers)
         Me.GroupBox1.Controls.Add(Me.rbHalfday)
         Me.GroupBox1.Controls.Add(Me.rbOnsite)
         Me.GroupBox1.Controls.Add(Me.rbEightam)
-        Me.GroupBox1.Controls.Add(Me.txtReason)
+        Me.GroupBox1.Controls.Add(Me.txtLTIReason)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(-1, 139)
@@ -99,17 +99,17 @@ Partial Class frmLateTimeIn
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "REASON"
         '
-        'rbOthers
+        'rbLTIOthers
         '
-        Me.rbOthers.AutoSize = True
-        Me.rbOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbOthers.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.rbOthers.Location = New System.Drawing.Point(30, 108)
-        Me.rbOthers.Name = "rbOthers"
-        Me.rbOthers.Size = New System.Drawing.Size(77, 22)
-        Me.rbOthers.TabIndex = 4
-        Me.rbOthers.Text = "Others:"
-        Me.rbOthers.UseVisualStyleBackColor = True
+        Me.rbLTIOthers.AutoSize = True
+        Me.rbLTIOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLTIOthers.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rbLTIOthers.Location = New System.Drawing.Point(30, 108)
+        Me.rbLTIOthers.Name = "rbLTIOthers"
+        Me.rbLTIOthers.Size = New System.Drawing.Size(77, 22)
+        Me.rbLTIOthers.TabIndex = 4
+        Me.rbLTIOthers.Text = "Others:"
+        Me.rbLTIOthers.UseVisualStyleBackColor = True
         '
         'rbHalfday
         '
@@ -147,36 +147,36 @@ Partial Class frmLateTimeIn
         Me.rbEightam.Text = "8:00 AM TIME-IN"
         Me.rbEightam.UseVisualStyleBackColor = True
         '
-        'txtReason
+        'txtLTIReason
         '
-        Me.txtReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReason.Location = New System.Drawing.Point(49, 135)
-        Me.txtReason.Multiline = True
-        Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(308, 96)
-        Me.txtReason.TabIndex = 5
-        Me.txtReason.TabStop = False
-        Me.txtReason.Tag = ""
+        Me.txtLTIReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLTIReason.Location = New System.Drawing.Point(49, 135)
+        Me.txtLTIReason.Multiline = True
+        Me.txtLTIReason.Name = "txtLTIReason"
+        Me.txtLTIReason.Size = New System.Drawing.Size(308, 96)
+        Me.txtLTIReason.TabIndex = 5
+        Me.txtLTIReason.TabStop = False
+        Me.txtLTIReason.Tag = ""
         '
-        'btnSubmit
+        'btnLTISubmit
         '
-        Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(263, 393)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(115, 35)
-        Me.btnSubmit.TabIndex = 6
-        Me.btnSubmit.TabStop = False
-        Me.btnSubmit.Text = "&SUBMIT"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.btnLTISubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLTISubmit.Location = New System.Drawing.Point(263, 393)
+        Me.btnLTISubmit.Name = "btnLTISubmit"
+        Me.btnLTISubmit.Size = New System.Drawing.Size(115, 35)
+        Me.btnLTISubmit.TabIndex = 6
+        Me.btnLTISubmit.TabStop = False
+        Me.btnLTISubmit.Text = "&SUBMIT"
+        Me.btnLTISubmit.UseVisualStyleBackColor = True
         '
         'frmLateTimeIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(385, 437)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.btnLTISubmit)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmLateTimeIn"
@@ -193,12 +193,12 @@ Partial Class frmLateTimeIn
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents btnSubmit As System.Windows.Forms.Button
-    Friend WithEvents txtReason As System.Windows.Forms.TextBox
-    Friend WithEvents rbOthers As System.Windows.Forms.RadioButton
+    Friend WithEvents btnLTISubmit As System.Windows.Forms.Button
+    Friend WithEvents txtLTIReason As System.Windows.Forms.TextBox
+    Friend WithEvents rbLTIOthers As System.Windows.Forms.RadioButton
     Friend WithEvents rbHalfday As System.Windows.Forms.RadioButton
     Friend WithEvents rbOnsite As System.Windows.Forms.RadioButton
     Friend WithEvents rbEightam As System.Windows.Forms.RadioButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lblTime As System.Windows.Forms.Label
+    Friend WithEvents lblTimeLTI As System.Windows.Forms.Label
 End Class

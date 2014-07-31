@@ -24,16 +24,16 @@ Partial Class frmLunchOB
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblLOBMins = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblTime = New System.Windows.Forms.Label()
+        Me.lblLOBHr = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.rbOthers = New System.Windows.Forms.RadioButton()
-        Me.rbClientCalls = New System.Windows.Forms.RadioButton()
-        Me.txtReason = New System.Windows.Forms.TextBox()
+        Me.rbLOBOthers = New System.Windows.Forms.RadioButton()
+        Me.rbLOBAccept = New System.Windows.Forms.RadioButton()
+        Me.txtLOBReason = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.btnLOBSubmit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -43,9 +43,9 @@ Partial Class frmLunchOB
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.lblLOBMins)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.lblTime)
+        Me.Panel1.Controls.Add(Me.lblLOBHr)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(-2, 10)
@@ -64,18 +64,18 @@ Partial Class frmLunchOB
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "mins"
         '
-        'Label4
+        'lblLOBMins
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(239, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 56)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "00"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblLOBMins.AutoSize = True
+        Me.lblLOBMins.BackColor = System.Drawing.Color.Transparent
+        Me.lblLOBMins.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLOBMins.ForeColor = System.Drawing.Color.Red
+        Me.lblLOBMins.Location = New System.Drawing.Point(239, 42)
+        Me.lblLOBMins.Name = "lblLOBMins"
+        Me.lblLOBMins.Size = New System.Drawing.Size(78, 56)
+        Me.lblLOBMins.TabIndex = 10
+        Me.lblLOBMins.Text = "00"
+        Me.lblLOBMins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -88,18 +88,18 @@ Partial Class frmLunchOB
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "hrs &&"
         '
-        'lblTime
+        'lblLOBHr
         '
-        Me.lblTime.AutoSize = True
-        Me.lblTime.BackColor = System.Drawing.Color.Transparent
-        Me.lblTime.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(120, 42)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(78, 56)
-        Me.lblTime.TabIndex = 8
-        Me.lblTime.Text = "00"
-        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblLOBHr.AutoSize = True
+        Me.lblLOBHr.BackColor = System.Drawing.Color.Transparent
+        Me.lblLOBHr.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLOBHr.ForeColor = System.Drawing.Color.Red
+        Me.lblLOBHr.Location = New System.Drawing.Point(120, 42)
+        Me.lblLOBHr.Name = "lblLOBHr"
+        Me.lblLOBHr.Size = New System.Drawing.Size(78, 56)
+        Me.lblLOBHr.TabIndex = 8
+        Me.lblLOBHr.Text = "00"
+        Me.lblLOBHr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -121,47 +121,47 @@ Partial Class frmLunchOB
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'rbOthers
+        'rbLOBOthers
         '
-        Me.rbOthers.AutoSize = True
-        Me.rbOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbOthers.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.rbOthers.Location = New System.Drawing.Point(30, 52)
-        Me.rbOthers.Name = "rbOthers"
-        Me.rbOthers.Size = New System.Drawing.Size(77, 22)
-        Me.rbOthers.TabIndex = 4
-        Me.rbOthers.Text = "Others:"
-        Me.rbOthers.UseVisualStyleBackColor = True
+        Me.rbLOBOthers.AutoSize = True
+        Me.rbLOBOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLOBOthers.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rbLOBOthers.Location = New System.Drawing.Point(30, 52)
+        Me.rbLOBOthers.Name = "rbLOBOthers"
+        Me.rbLOBOthers.Size = New System.Drawing.Size(77, 22)
+        Me.rbLOBOthers.TabIndex = 4
+        Me.rbLOBOthers.Text = "Others:"
+        Me.rbLOBOthers.UseVisualStyleBackColor = True
         '
-        'rbClientCalls
+        'rbLOBAccept
         '
-        Me.rbClientCalls.AutoSize = True
-        Me.rbClientCalls.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbClientCalls.ForeColor = System.Drawing.Color.White
-        Me.rbClientCalls.Location = New System.Drawing.Point(30, 25)
-        Me.rbClientCalls.Name = "rbClientCalls"
-        Me.rbClientCalls.Size = New System.Drawing.Size(185, 22)
-        Me.rbClientCalls.TabIndex = 1
-        Me.rbClientCalls.Text = "Accepting Client Call"
-        Me.rbClientCalls.UseVisualStyleBackColor = True
+        Me.rbLOBAccept.AutoSize = True
+        Me.rbLOBAccept.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLOBAccept.ForeColor = System.Drawing.Color.White
+        Me.rbLOBAccept.Location = New System.Drawing.Point(30, 25)
+        Me.rbLOBAccept.Name = "rbLOBAccept"
+        Me.rbLOBAccept.Size = New System.Drawing.Size(169, 22)
+        Me.rbLOBAccept.TabIndex = 1
+        Me.rbLOBAccept.Text = "Accepting Inquiries"
+        Me.rbLOBAccept.UseVisualStyleBackColor = True
         '
-        'txtReason
+        'txtLOBReason
         '
-        Me.txtReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReason.Location = New System.Drawing.Point(49, 79)
-        Me.txtReason.Multiline = True
-        Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(308, 96)
-        Me.txtReason.TabIndex = 5
-        Me.txtReason.TabStop = False
-        Me.txtReason.Tag = ""
+        Me.txtLOBReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLOBReason.Location = New System.Drawing.Point(49, 79)
+        Me.txtLOBReason.Multiline = True
+        Me.txtLOBReason.Name = "txtLOBReason"
+        Me.txtLOBReason.Size = New System.Drawing.Size(308, 96)
+        Me.txtLOBReason.TabIndex = 5
+        Me.txtLOBReason.TabStop = False
+        Me.txtLOBReason.Tag = ""
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox1.Controls.Add(Me.rbOthers)
-        Me.GroupBox1.Controls.Add(Me.rbClientCalls)
-        Me.GroupBox1.Controls.Add(Me.txtReason)
+        Me.GroupBox1.Controls.Add(Me.rbLOBOthers)
+        Me.GroupBox1.Controls.Add(Me.rbLOBAccept)
+        Me.GroupBox1.Controls.Add(Me.txtLOBReason)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(-2, 139)
@@ -171,26 +171,26 @@ Partial Class frmLunchOB
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "REASON"
         '
-        'btnSubmit
+        'btnLOBSubmit
         '
-        Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(262, 336)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(115, 35)
-        Me.btnSubmit.TabIndex = 28
-        Me.btnSubmit.TabStop = False
-        Me.btnSubmit.Text = "&SUBMIT"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.btnLOBSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLOBSubmit.Location = New System.Drawing.Point(262, 336)
+        Me.btnLOBSubmit.Name = "btnLOBSubmit"
+        Me.btnLOBSubmit.Size = New System.Drawing.Size(115, 35)
+        Me.btnLOBSubmit.TabIndex = 28
+        Me.btnLOBSubmit.TabStop = False
+        Me.btnLOBSubmit.Text = "&SUBMIT"
+        Me.btnLOBSubmit.UseVisualStyleBackColor = True
         '
         'frmLunchOB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(385, 381)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.btnLOBSubmit)
         Me.Name = "frmLunchOB"
         Me.Text = "Lunch Overbreak Reason"
         Me.Panel1.ResumeLayout(False)
@@ -205,12 +205,12 @@ Partial Class frmLunchOB
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents rbOthers As System.Windows.Forms.RadioButton
-    Friend WithEvents rbClientCalls As System.Windows.Forms.RadioButton
-    Friend WithEvents txtReason As System.Windows.Forms.TextBox
+    Friend WithEvents rbLOBOthers As System.Windows.Forms.RadioButton
+    Friend WithEvents rbLOBAccept As System.Windows.Forms.RadioButton
+    Friend WithEvents txtLOBReason As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents btnSubmit As System.Windows.Forms.Button
+    Friend WithEvents btnLOBSubmit As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents lblTime As System.Windows.Forms.Label
+    Friend WithEvents lblLOBMins As System.Windows.Forms.Label
+    Friend WithEvents lblLOBHr As System.Windows.Forms.Label
 End Class

@@ -23,14 +23,14 @@ Partial Class frmLateBreaktime
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblTime = New System.Windows.Forms.Label()
+        Me.lblTimeLBT = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.rbOthers = New System.Windows.Forms.RadioButton()
-        Me.rbClientCalls = New System.Windows.Forms.RadioButton()
+        Me.rbLBTOthers = New System.Windows.Forms.RadioButton()
+        Me.rbLBTAccept = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtReason = New System.Windows.Forms.TextBox()
-        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.txtLBTReason = New System.Windows.Forms.TextBox()
+        Me.btnLBTSubmit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -39,7 +39,7 @@ Partial Class frmLateBreaktime
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.lblTime)
+        Me.Panel1.Controls.Add(Me.lblTimeLBT)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(-2, 9)
@@ -47,18 +47,18 @@ Partial Class frmLateBreaktime
         Me.Panel1.Size = New System.Drawing.Size(389, 112)
         Me.Panel1.TabIndex = 23
         '
-        'lblTime
+        'lblTimeLBT
         '
-        Me.lblTime.AutoSize = True
-        Me.lblTime.BackColor = System.Drawing.Color.Transparent
-        Me.lblTime.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(141, 41)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(212, 56)
-        Me.lblTime.TabIndex = 8
-        Me.lblTime.Text = "00:00:00"
-        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTimeLBT.AutoSize = True
+        Me.lblTimeLBT.BackColor = System.Drawing.Color.Transparent
+        Me.lblTimeLBT.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimeLBT.ForeColor = System.Drawing.Color.Red
+        Me.lblTimeLBT.Location = New System.Drawing.Point(141, 41)
+        Me.lblTimeLBT.Name = "lblTimeLBT"
+        Me.lblTimeLBT.Size = New System.Drawing.Size(212, 56)
+        Me.lblTimeLBT.TabIndex = 8
+        Me.lblTimeLBT.Text = "00:00:00"
+        Me.lblTimeLBT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -80,36 +80,36 @@ Partial Class frmLateBreaktime
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'rbOthers
+        'rbLBTOthers
         '
-        Me.rbOthers.AutoSize = True
-        Me.rbOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbOthers.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.rbOthers.Location = New System.Drawing.Point(30, 52)
-        Me.rbOthers.Name = "rbOthers"
-        Me.rbOthers.Size = New System.Drawing.Size(77, 22)
-        Me.rbOthers.TabIndex = 4
-        Me.rbOthers.Text = "Others:"
-        Me.rbOthers.UseVisualStyleBackColor = True
+        Me.rbLBTOthers.AutoSize = True
+        Me.rbLBTOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLBTOthers.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rbLBTOthers.Location = New System.Drawing.Point(30, 52)
+        Me.rbLBTOthers.Name = "rbLBTOthers"
+        Me.rbLBTOthers.Size = New System.Drawing.Size(77, 22)
+        Me.rbLBTOthers.TabIndex = 4
+        Me.rbLBTOthers.Text = "Others:"
+        Me.rbLBTOthers.UseVisualStyleBackColor = True
         '
-        'rbClientCalls
+        'rbLBTAccept
         '
-        Me.rbClientCalls.AutoSize = True
-        Me.rbClientCalls.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbClientCalls.ForeColor = System.Drawing.Color.White
-        Me.rbClientCalls.Location = New System.Drawing.Point(30, 25)
-        Me.rbClientCalls.Name = "rbClientCalls"
-        Me.rbClientCalls.Size = New System.Drawing.Size(185, 22)
-        Me.rbClientCalls.TabIndex = 1
-        Me.rbClientCalls.Text = "Accepting Client Call"
-        Me.rbClientCalls.UseVisualStyleBackColor = True
+        Me.rbLBTAccept.AutoSize = True
+        Me.rbLBTAccept.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLBTAccept.ForeColor = System.Drawing.Color.White
+        Me.rbLBTAccept.Location = New System.Drawing.Point(30, 25)
+        Me.rbLBTAccept.Name = "rbLBTAccept"
+        Me.rbLBTAccept.Size = New System.Drawing.Size(169, 22)
+        Me.rbLBTAccept.TabIndex = 1
+        Me.rbLBTAccept.Text = "Accepting Inquiries"
+        Me.rbLBTAccept.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox1.Controls.Add(Me.rbOthers)
-        Me.GroupBox1.Controls.Add(Me.rbClientCalls)
-        Me.GroupBox1.Controls.Add(Me.txtReason)
+        Me.GroupBox1.Controls.Add(Me.rbLBTOthers)
+        Me.GroupBox1.Controls.Add(Me.rbLBTAccept)
+        Me.GroupBox1.Controls.Add(Me.txtLBTReason)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(-2, 138)
@@ -119,38 +119,38 @@ Partial Class frmLateBreaktime
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "REASON"
         '
-        'txtReason
+        'txtLBTReason
         '
-        Me.txtReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReason.Location = New System.Drawing.Point(49, 79)
-        Me.txtReason.Multiline = True
-        Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(308, 96)
-        Me.txtReason.TabIndex = 5
-        Me.txtReason.TabStop = False
-        Me.txtReason.Tag = ""
+        Me.txtLBTReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLBTReason.Location = New System.Drawing.Point(49, 79)
+        Me.txtLBTReason.Multiline = True
+        Me.txtLBTReason.Name = "txtLBTReason"
+        Me.txtLBTReason.Size = New System.Drawing.Size(308, 96)
+        Me.txtLBTReason.TabIndex = 5
+        Me.txtLBTReason.TabStop = False
+        Me.txtLBTReason.Tag = ""
         '
-        'btnSubmit
+        'btnLBTSubmit
         '
-        Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(262, 335)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(115, 35)
-        Me.btnSubmit.TabIndex = 22
-        Me.btnSubmit.TabStop = False
-        Me.btnSubmit.Text = "&SUBMIT"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.btnLBTSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLBTSubmit.Location = New System.Drawing.Point(262, 335)
+        Me.btnLBTSubmit.Name = "btnLBTSubmit"
+        Me.btnLBTSubmit.Size = New System.Drawing.Size(115, 35)
+        Me.btnLBTSubmit.TabIndex = 22
+        Me.btnLBTSubmit.TabStop = False
+        Me.btnLBTSubmit.Text = "&SUBMIT"
+        Me.btnLBTSubmit.UseVisualStyleBackColor = True
         '
         'frmLateBreaktime
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(385, 381)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.btnLBTSubmit)
         Me.Name = "frmLateBreaktime"
         Me.Text = "Late Breaktime"
         Me.Panel1.ResumeLayout(False)
@@ -162,12 +162,12 @@ Partial Class frmLateBreaktime
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents lblTime As System.Windows.Forms.Label
+    Friend WithEvents lblTimeLBT As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents rbOthers As System.Windows.Forms.RadioButton
-    Friend WithEvents rbClientCalls As System.Windows.Forms.RadioButton
+    Friend WithEvents rbLBTOthers As System.Windows.Forms.RadioButton
+    Friend WithEvents rbLBTAccept As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtReason As System.Windows.Forms.TextBox
-    Friend WithEvents btnSubmit As System.Windows.Forms.Button
+    Friend WithEvents txtLBTReason As System.Windows.Forms.TextBox
+    Friend WithEvents btnLBTSubmit As System.Windows.Forms.Button
 End Class

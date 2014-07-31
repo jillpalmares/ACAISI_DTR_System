@@ -24,7 +24,6 @@ Partial Class frmAdminMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlAdminTop = New System.Windows.Forms.Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblWelcome = New System.Windows.Forms.Label()
@@ -51,6 +50,8 @@ Partial Class frmAdminMenu
         Me.tabAdminOpt = New System.Windows.Forms.TabControl()
         Me.TblEmployeesTableAdapter = New WindowsApplication1.dtrdb1DataSetTableAdapters.tblEmployeesTableAdapter()
         Me.TblEmployeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tabTardinessReport = New System.Windows.Forms.TabPage()
+        Me.btnViewInactive = New System.Windows.Forms.Button()
         Me.pnlAdminTop.SuspendLayout()
         Me.tabEmployees.SuspendLayout()
         Me.panMenuBar.SuspendLayout()
@@ -97,29 +98,32 @@ Partial Class frmAdminMenu
         'tabReports
         '
         Me.tabReports.BackColor = System.Drawing.Color.Gainsboro
-        Me.tabReports.Location = New System.Drawing.Point(4, 25)
+        Me.tabReports.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tabReports.Location = New System.Drawing.Point(4, 33)
         Me.tabReports.Name = "tabReports"
         Me.tabReports.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabReports.Size = New System.Drawing.Size(1114, 553)
+        Me.tabReports.Size = New System.Drawing.Size(1114, 545)
         Me.tabReports.TabIndex = 1
         Me.tabReports.Text = "TIME LOG"
         '
         'tabEmployees
         '
         Me.tabEmployees.BackColor = System.Drawing.Color.DarkGray
+        Me.tabEmployees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.tabEmployees.Controls.Add(Me.panMenuBar)
         Me.tabEmployees.Controls.Add(Me.dgvData)
         Me.tabEmployees.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tabEmployees.Location = New System.Drawing.Point(4, 25)
+        Me.tabEmployees.Location = New System.Drawing.Point(4, 33)
         Me.tabEmployees.Name = "tabEmployees"
         Me.tabEmployees.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabEmployees.Size = New System.Drawing.Size(1114, 553)
+        Me.tabEmployees.Size = New System.Drawing.Size(1114, 545)
         Me.tabEmployees.TabIndex = 0
         Me.tabEmployees.Text = "EMPLOYEES"
         '
         'panMenuBar
         '
         Me.panMenuBar.BackColor = System.Drawing.Color.Gainsboro
+        Me.panMenuBar.Controls.Add(Me.btnViewInactive)
         Me.panMenuBar.Controls.Add(Me.btnEmpReport)
         Me.panMenuBar.Controls.Add(Me.btnDeleteEmp)
         Me.panMenuBar.Controls.Add(Me.btnEditEmp)
@@ -190,14 +194,6 @@ Partial Class frmAdminMenu
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.EmpnumDataGridViewTextBoxColumn, Me.PinnumDataGridViewTextBoxColumn, Me.LnameDataGridViewTextBoxColumn, Me.FnameDataGridViewTextBoxColumn, Me.MnameDataGridViewTextBoxColumn, Me.EmpposDataGridViewTextBoxColumn, Me.EmptypeDataGridViewTextBoxColumn, Me.acclevel})
         Me.dgvData.DataSource = Me.TblEmployeesBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvData.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvData.Location = New System.Drawing.Point(3, 44)
         Me.dgvData.Name = "dgvData"
         Me.dgvData.ReadOnly = True
@@ -294,9 +290,11 @@ Partial Class frmAdminMenu
         '
         Me.tabAdminOpt.Controls.Add(Me.tabEmployees)
         Me.tabAdminOpt.Controls.Add(Me.tabReports)
+        Me.tabAdminOpt.Controls.Add(Me.tabTardinessReport)
         Me.tabAdminOpt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tabAdminOpt.Location = New System.Drawing.Point(2, 52)
         Me.tabAdminOpt.Name = "tabAdminOpt"
+        Me.tabAdminOpt.Padding = New System.Drawing.Point(30, 7)
         Me.tabAdminOpt.SelectedIndex = 0
         Me.tabAdminOpt.Size = New System.Drawing.Size(1122, 582)
         Me.tabAdminOpt.TabIndex = 1
@@ -304,6 +302,27 @@ Partial Class frmAdminMenu
         'TblEmployeesTableAdapter
         '
         Me.TblEmployeesTableAdapter.ClearBeforeFill = True
+        '
+        'tabTardinessReport
+        '
+        Me.tabTardinessReport.BackColor = System.Drawing.Color.Gainsboro
+        Me.tabTardinessReport.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tabTardinessReport.Location = New System.Drawing.Point(4, 33)
+        Me.tabTardinessReport.Name = "tabTardinessReport"
+        Me.tabTardinessReport.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabTardinessReport.Size = New System.Drawing.Size(1114, 545)
+        Me.tabTardinessReport.TabIndex = 2
+        Me.tabTardinessReport.Text = "TARDINESS REPORT"
+        '
+        'btnViewInactive
+        '
+        Me.btnViewInactive.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewInactive.Location = New System.Drawing.Point(966, 1)
+        Me.btnViewInactive.Name = "btnViewInactive"
+        Me.btnViewInactive.Size = New System.Drawing.Size(135, 33)
+        Me.btnViewInactive.TabIndex = 2
+        Me.btnViewInactive.Text = "View Inactive List"
+        Me.btnViewInactive.UseVisualStyleBackColor = True
         '
         'frmAdminMenu
         '
@@ -356,4 +375,6 @@ Partial Class frmAdminMenu
     Friend WithEvents EmptypeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents acclevel As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnEmpReport As System.Windows.Forms.Button
+    Friend WithEvents tabTardinessReport As System.Windows.Forms.TabPage
+    Friend WithEvents btnViewInactive As System.Windows.Forms.Button
 End Class

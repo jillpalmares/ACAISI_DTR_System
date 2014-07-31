@@ -22,41 +22,41 @@ Partial Class frmPMOB
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.rbOthers = New System.Windows.Forms.RadioButton()
+        Me.rbPMOBOthers = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.rbClientCalls = New System.Windows.Forms.RadioButton()
-        Me.txtReason = New System.Windows.Forms.TextBox()
+        Me.rbPMOBAccept = New System.Windows.Forms.RadioButton()
+        Me.txtPMOBReason = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblPMOBMins = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblTime = New System.Windows.Forms.Label()
+        Me.lblPMOBHr = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnPMOBSubmit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'rbOthers
+        'rbPMOBOthers
         '
-        Me.rbOthers.AutoSize = True
-        Me.rbOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbOthers.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.rbOthers.Location = New System.Drawing.Point(30, 52)
-        Me.rbOthers.Name = "rbOthers"
-        Me.rbOthers.Size = New System.Drawing.Size(77, 22)
-        Me.rbOthers.TabIndex = 4
-        Me.rbOthers.Text = "Others:"
-        Me.rbOthers.UseVisualStyleBackColor = True
+        Me.rbPMOBOthers.AutoSize = True
+        Me.rbPMOBOthers.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPMOBOthers.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rbPMOBOthers.Location = New System.Drawing.Point(30, 52)
+        Me.rbPMOBOthers.Name = "rbPMOBOthers"
+        Me.rbPMOBOthers.Size = New System.Drawing.Size(77, 22)
+        Me.rbPMOBOthers.TabIndex = 4
+        Me.rbPMOBOthers.Text = "Others:"
+        Me.rbPMOBOthers.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox1.Controls.Add(Me.rbOthers)
-        Me.GroupBox1.Controls.Add(Me.rbClientCalls)
-        Me.GroupBox1.Controls.Add(Me.txtReason)
+        Me.GroupBox1.Controls.Add(Me.rbPMOBOthers)
+        Me.GroupBox1.Controls.Add(Me.rbPMOBAccept)
+        Me.GroupBox1.Controls.Add(Me.txtPMOBReason)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(-2, 139)
@@ -66,36 +66,36 @@ Partial Class frmPMOB
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "REASON"
         '
-        'rbClientCalls
+        'rbPMOBAccept
         '
-        Me.rbClientCalls.AutoSize = True
-        Me.rbClientCalls.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbClientCalls.ForeColor = System.Drawing.Color.White
-        Me.rbClientCalls.Location = New System.Drawing.Point(30, 25)
-        Me.rbClientCalls.Name = "rbClientCalls"
-        Me.rbClientCalls.Size = New System.Drawing.Size(185, 22)
-        Me.rbClientCalls.TabIndex = 1
-        Me.rbClientCalls.Text = "Accepting Client Call"
-        Me.rbClientCalls.UseVisualStyleBackColor = True
+        Me.rbPMOBAccept.AutoSize = True
+        Me.rbPMOBAccept.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPMOBAccept.ForeColor = System.Drawing.Color.White
+        Me.rbPMOBAccept.Location = New System.Drawing.Point(30, 25)
+        Me.rbPMOBAccept.Name = "rbPMOBAccept"
+        Me.rbPMOBAccept.Size = New System.Drawing.Size(169, 22)
+        Me.rbPMOBAccept.TabIndex = 1
+        Me.rbPMOBAccept.Text = "Accepting Inquiries"
+        Me.rbPMOBAccept.UseVisualStyleBackColor = True
         '
-        'txtReason
+        'txtPMOBReason
         '
-        Me.txtReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReason.Location = New System.Drawing.Point(49, 79)
-        Me.txtReason.Multiline = True
-        Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(308, 96)
-        Me.txtReason.TabIndex = 5
-        Me.txtReason.TabStop = False
-        Me.txtReason.Tag = ""
+        Me.txtPMOBReason.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPMOBReason.Location = New System.Drawing.Point(49, 79)
+        Me.txtPMOBReason.Multiline = True
+        Me.txtPMOBReason.Name = "txtPMOBReason"
+        Me.txtPMOBReason.Size = New System.Drawing.Size(308, 96)
+        Me.txtPMOBReason.TabIndex = 5
+        Me.txtPMOBReason.TabStop = False
+        Me.txtPMOBReason.Tag = ""
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.lblPMOBMins)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.lblTime)
+        Me.Panel1.Controls.Add(Me.lblPMOBHr)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(-2, 10)
@@ -114,18 +114,18 @@ Partial Class frmPMOB
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "mins"
         '
-        'Label4
+        'lblPMOBMins
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(239, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 56)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "00"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblPMOBMins.AutoSize = True
+        Me.lblPMOBMins.BackColor = System.Drawing.Color.Transparent
+        Me.lblPMOBMins.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPMOBMins.ForeColor = System.Drawing.Color.Red
+        Me.lblPMOBMins.Location = New System.Drawing.Point(239, 42)
+        Me.lblPMOBMins.Name = "lblPMOBMins"
+        Me.lblPMOBMins.Size = New System.Drawing.Size(78, 56)
+        Me.lblPMOBMins.TabIndex = 10
+        Me.lblPMOBMins.Text = "00"
+        Me.lblPMOBMins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -138,18 +138,18 @@ Partial Class frmPMOB
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "hrs &&"
         '
-        'lblTime
+        'lblPMOBHr
         '
-        Me.lblTime.AutoSize = True
-        Me.lblTime.BackColor = System.Drawing.Color.Transparent
-        Me.lblTime.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(120, 42)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(78, 56)
-        Me.lblTime.TabIndex = 8
-        Me.lblTime.Text = "00"
-        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblPMOBHr.AutoSize = True
+        Me.lblPMOBHr.BackColor = System.Drawing.Color.Transparent
+        Me.lblPMOBHr.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPMOBHr.ForeColor = System.Drawing.Color.Red
+        Me.lblPMOBHr.Location = New System.Drawing.Point(120, 42)
+        Me.lblPMOBHr.Name = "lblPMOBHr"
+        Me.lblPMOBHr.Size = New System.Drawing.Size(78, 56)
+        Me.lblPMOBHr.TabIndex = 8
+        Me.lblPMOBHr.Text = "00"
+        Me.lblPMOBHr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -161,17 +161,6 @@ Partial Class frmPMOB
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "You have consumed:"
         '
-        'btnSubmit
-        '
-        Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(262, 336)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(115, 35)
-        Me.btnSubmit.TabIndex = 31
-        Me.btnSubmit.TabStop = False
-        Me.btnSubmit.Text = "&SUBMIT"
-        Me.btnSubmit.UseVisualStyleBackColor = True
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.Warning
@@ -182,15 +171,26 @@ Partial Class frmPMOB
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'btnPMOBSubmit
+        '
+        Me.btnPMOBSubmit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPMOBSubmit.Location = New System.Drawing.Point(262, 336)
+        Me.btnPMOBSubmit.Name = "btnPMOBSubmit"
+        Me.btnPMOBSubmit.Size = New System.Drawing.Size(115, 35)
+        Me.btnPMOBSubmit.TabIndex = 31
+        Me.btnPMOBSubmit.TabStop = False
+        Me.btnPMOBSubmit.Text = "&SUBMIT"
+        Me.btnPMOBSubmit.UseVisualStyleBackColor = True
+        '
         'frmPMOB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(385, 381)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.btnPMOBSubmit)
         Me.Name = "frmPMOB"
         Me.Text = "PM Overbreak Reason"
         Me.GroupBox1.ResumeLayout(False)
@@ -201,16 +201,16 @@ Partial Class frmPMOB
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents rbOthers As System.Windows.Forms.RadioButton
+    Friend WithEvents rbPMOBOthers As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents rbClientCalls As System.Windows.Forms.RadioButton
-    Friend WithEvents txtReason As System.Windows.Forms.TextBox
+    Friend WithEvents rbPMOBAccept As System.Windows.Forms.RadioButton
+    Friend WithEvents txtPMOBReason As System.Windows.Forms.TextBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lblPMOBMins As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents lblTime As System.Windows.Forms.Label
+    Friend WithEvents lblPMOBHr As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents btnSubmit As System.Windows.Forms.Button
+    Friend WithEvents btnPMOBSubmit As System.Windows.Forms.Button
 End Class

@@ -77,3 +77,6 @@ C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Tr
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.pdb
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\ACAISI_DTR_Trial_1.vbprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmLateBreaktime.resources
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmPMOB.resources
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmLunchOB.resources
+C:\Users\User\Documents\GitHub\ACAISI_DTR_System\ACAISI_DTR_System\ACAISI_DTR_Trial_1\obj\x86\Debug\WindowsApplication1.frmAMOB.resources
