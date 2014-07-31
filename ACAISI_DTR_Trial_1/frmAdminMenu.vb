@@ -6,6 +6,16 @@ Public Class frmAdminMenu
     Dim cnn As New OleDb.OleDbConnection
 
     Private Sub frmAdminMenu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Dtrdb2DataSet.tblTimeLog' table. You can move, or remove it, as needed.
+        Me.TblTimeLogTableAdapter.Fill(Me.Dtrdb2DataSet.tblTimeLog)
+        'TODO: This line of code loads data into the 'Dtrdb2DataSet1.qryDGView' table. You can move, or remove it, as needed.
+        Me.QryDGViewTableAdapter.Fill(Me.Dtrdb2DataSet1.qryDGView)
+        'TODO: This line of code loads data into the 'Dtrdb2DataSet.qryLateAMBrk' table. You can move, or remove it, as needed.
+        Me.QryLateAMBrkTableAdapter.Fill(Me.Dtrdb2DataSet.qryLateAMBrk)
+        'TODO: This line of code loads data into the 'Dtrdb2DataSet.qryempname' table. You can move, or remove it, as needed.
+        Me.QryempnameTableAdapter.Fill(Me.Dtrdb2DataSet.qryempname)
+        'TODO: This line of code loads data into the 'Dtrdb2DataSet.tblEmployees' table. You can move, or remove it, as needed.
+        Me.TblEmployeesTableAdapter1.Fill(Me.Dtrdb2DataSet.tblEmployees)
         'TODO: This line of code loads data into the 'Dtrdb1DataSet.tblEmployees' table. You can move, or remove it, as needed.
         Me.TblEmployeesTableAdapter.Fill(Me.Dtrdb1DataSet.tblEmployees)
         MaximizeBox = False
@@ -23,7 +33,7 @@ Public Class frmAdminMenu
 
         cnn = New OleDb.OleDbConnection()
         dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;"
-        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
+        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb2.mdb"
         cnn.ConnectionString = dbProvider + dbSource
 
         Me.RefreshData()

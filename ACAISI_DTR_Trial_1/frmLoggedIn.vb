@@ -156,7 +156,7 @@
         'Latest start of PM Breaktime would be 10:10pm
         'Late breaktime starts at 10:11pm
 
-        If currentHour = 10 And currentMinute > 5 Then
+        If currentHour = 10 And currentMinute > 10 Then
             frmLateBreaktime.Show()
         End If
 
@@ -174,11 +174,8 @@
 
     Private Sub btnLunOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLunOut.Click
 
-        'Latest start of PM Breaktime would be 3:10pm
-        'Late breaktime starts at 3:11pm
-        If currentHour = 12 And currentMinute > 30 Then
-            frmLateBreaktime.Show()
-        End If
+        'Check the Lunch Time Slot of the Employee from the database
+
 
     End Sub
 End Class

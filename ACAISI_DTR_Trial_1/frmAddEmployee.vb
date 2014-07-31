@@ -12,7 +12,7 @@ Public Class frmAddEmployee
 
         cnn = New OleDb.OleDbConnection()
         dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;"
-        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb1.mdb"
+        dbSource = "Data Source = " & Application.StartupPath & "\dtrdb2.mdb"
         cnn.ConnectionString = dbProvider + dbSource
 
         txtFileName.Hide()

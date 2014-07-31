@@ -102,6 +102,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtrdb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dtrdb2DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtrdb2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtrdb2DataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtrdb2DataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmInactiveEmp.Designer.vb">
       <DependentUpon>frmInactiveEmp.vb</DependentUpon>
     </Compile>
@@ -267,6 +277,28 @@
     <None Include="dtrdb1DataSet.xss">
       <DependentUpon>dtrdb1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="dtrdb2DataSet1.xsc">
+      <DependentUpon>dtrdb2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dtrdb2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtrdb2DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtrdb2DataSet1.xss">
+      <DependentUpon>dtrdb2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dtrdb2DataSet11.xsc">
+      <DependentUpon>dtrdb2DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="dtrdb2DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtrdb2DataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtrdb2DataSet11.xss">
+      <DependentUpon>dtrdb2DataSet11.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -330,9 +362,6 @@
     <None Include="Resources\Delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dtrdb1.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\Warning.png" />
     <None Include="Resources\400px-Warning_icon.svg.png" />
     <None Include="Resources\PngMedium-man-male-user-icon-15874.png" />
@@ -340,6 +369,14 @@
     <None Include="Resources\report.png" />
     <None Include="Resources\report1.png" />
     <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dtrdb1.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dtrdb2.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,7 +41,7 @@ Partial Class frmLoggedIn
         'btnPmOut
         '
         Me.btnPmOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPmOut.Location = New System.Drawing.Point(278, 158)
+        Me.btnPmOut.Location = New System.Drawing.Point(274, 158)
         Me.btnPmOut.Name = "btnPmOut"
         Me.btnPmOut.Size = New System.Drawing.Size(96, 35)
         Me.btnPmOut.TabIndex = 17
@@ -52,7 +52,7 @@ Partial Class frmLoggedIn
         'btnPmIn
         '
         Me.btnPmIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPmIn.Location = New System.Drawing.Point(381, 158)
+        Me.btnPmIn.Location = New System.Drawing.Point(377, 158)
         Me.btnPmIn.Name = "btnPmIn"
         Me.btnPmIn.Size = New System.Drawing.Size(96, 35)
         Me.btnPmIn.TabIndex = 16
@@ -63,7 +63,7 @@ Partial Class frmLoggedIn
         'btnLunOut
         '
         Me.btnLunOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLunOut.Location = New System.Drawing.Point(278, 114)
+        Me.btnLunOut.Location = New System.Drawing.Point(274, 114)
         Me.btnLunOut.Name = "btnLunOut"
         Me.btnLunOut.Size = New System.Drawing.Size(96, 35)
         Me.btnLunOut.TabIndex = 15
@@ -74,7 +74,7 @@ Partial Class frmLoggedIn
         'btnLunIn
         '
         Me.btnLunIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLunIn.Location = New System.Drawing.Point(381, 114)
+        Me.btnLunIn.Location = New System.Drawing.Point(377, 114)
         Me.btnLunIn.Name = "btnLunIn"
         Me.btnLunIn.Size = New System.Drawing.Size(96, 35)
         Me.btnLunIn.TabIndex = 14
@@ -85,7 +85,7 @@ Partial Class frmLoggedIn
         'btnAmOut
         '
         Me.btnAmOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAmOut.Location = New System.Drawing.Point(278, 70)
+        Me.btnAmOut.Location = New System.Drawing.Point(274, 70)
         Me.btnAmOut.Name = "btnAmOut"
         Me.btnAmOut.Size = New System.Drawing.Size(96, 35)
         Me.btnAmOut.TabIndex = 13
@@ -96,7 +96,7 @@ Partial Class frmLoggedIn
         'btnAmIn
         '
         Me.btnAmIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAmIn.Location = New System.Drawing.Point(381, 70)
+        Me.btnAmIn.Location = New System.Drawing.Point(377, 70)
         Me.btnAmIn.Name = "btnAmIn"
         Me.btnAmIn.Size = New System.Drawing.Size(96, 35)
         Me.btnAmIn.TabIndex = 12
@@ -107,7 +107,7 @@ Partial Class frmLoggedIn
         'btnTimeOut
         '
         Me.btnTimeOut.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTimeOut.Location = New System.Drawing.Point(320, 211)
+        Me.btnTimeOut.Location = New System.Drawing.Point(316, 211)
         Me.btnTimeOut.Name = "btnTimeOut"
         Me.btnTimeOut.Size = New System.Drawing.Size(115, 35)
         Me.btnTimeOut.TabIndex = 11
@@ -118,7 +118,7 @@ Partial Class frmLoggedIn
         'btnTimeIn
         '
         Me.btnTimeIn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTimeIn.Location = New System.Drawing.Point(320, 16)
+        Me.btnTimeIn.Location = New System.Drawing.Point(316, 16)
         Me.btnTimeIn.Name = "btnTimeIn"
         Me.btnTimeIn.Size = New System.Drawing.Size(115, 35)
         Me.btnTimeIn.TabIndex = 10
